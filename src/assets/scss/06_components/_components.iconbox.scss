@@ -1,0 +1,93 @@
+.c-iconbox{
+  i {margin-bottom: spacing(1);}
+
+  @include media-breakpoint-only(xs) {
+    margin-bottom: spacing(base);
+  }
+
+  .c-iconbox__btn {bottom: spacing(1);}
+  .c-iconbox__btn svg {transform: rotate(45deg);}
+
+  svg {
+    width: 130px;
+    height: 130px;
+    @include media-breakpoint-up(md) {
+      width: 110px;
+      height: 110px;
+    }
+    @include media-breakpoint-up(lg) {
+      width: 172px;
+      height: 172px;
+    }
+
+  }
+}
+
+.c-iconbox__link{
+  height: 100%;
+  background: $gray-light;
+  text-decoration: none;
+  padding: spacing(1);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 366px;
+
+  @include media-breakpoint-up(md) {
+    min-height: 356px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    min-height: 452px;
+  }
+
+  &:hover {
+    text-decoration: none;
+    .c-iconbox__btn {background: darken($red, 10%);}
+  }
+
+  &.collapsed {
+    min-height: 330px;
+    @include media-breakpoint-up(md) {
+      min-height: 320px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      min-height: 416px;
+    }
+
+    i {margin-bottom: 0;}
+    .c-iconbox__btn {bottom: 0;}
+    .c-iconbox__btn svg {transform: rotate(0deg);}
+
+    &:hover {
+      background: darken($gray-light, 3%);
+    }
+  }
+
+  h3 {
+    @include media-breakpoint-down(lg) {
+      @include typi(mplus);
+    }
+  }
+}
+
+.c-iconbox__title {color: $black-dark;}
+
+.c-iconbox__btn {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 48px;
+  height: 48px;
+  background: $red;
+  display: flex;
+  justify-content: center;
+	align-items: center;
+
+  svg {
+    width: 12px;
+    height: 12px;
+  }
+}

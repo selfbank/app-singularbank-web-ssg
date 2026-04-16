@@ -1,0 +1,7 @@
+# npm audit reference
+
+Pre–Fase 2 (historical): ~94 vulnerabilities reported.
+
+After overrides + removing gulp-sass-lint via patch (typical): run `npm audit` — remaining issues often include gulp-build/handlebars, BrowserSync, Gulp 4 / chokidar, etc.
+
+Do not rely on `npm audit fix --force` without review (can downgrade gulp-tasks-pleasure).

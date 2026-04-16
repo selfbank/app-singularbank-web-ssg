@@ -1,0 +1,201 @@
+{% extends "_layouts/page.twig" %}
+{% block page %}
+
+<div class="plan-details w-100">
+  <section class="c-hero c-hero--details-zero mt-8">
+     <div class="container">
+      <div class="row">
+	      <div class="col-12 col-sm-6 col-lg-4 mt-8">
+          <div class="info-box mr-sm-0 ml-sm-0 "> <span class="info-box-title">1/6</span> <span>Este número es el indicativo del riesgo del producto, siendo 1/6 indicativo de menor riesgo y 6/6 de mayor riesgo.</span> </div>
+          <div class="info-box info-box-no-upper-border mb-5 mb-lg-0 mr-sm-0 ml-sm-0"> <span>Singular Bank se encuentra adherido al Fondo Español de Garantía de Depósitos de Entidades de Crédito. La cantidad máxima garantizada por el Fondo es de 100.000 euros por depositante.</span> </div>
+        </div>	  
+        <div class="col-12 col-sm-6 col-lg-8">
+          <div class="c-hero__container">
+            <h1>Cuenta corriente <span class="bold">Singular Zero</span></h1>
+            <h3>Cuenta y tarjetas sin comisiones para su operativa diaria.</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="background-gray u-pt-4 u-pb-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-7 col-xl-8">
+          <h2 class="red-text">Singular Zero</h2>
+          <div class="red-text d-flex flex-column">
+            <span>SERVICIOS PARA SU DÍA A DÍA SIN COMISIONES</span>
+          </div>
+          <div class="description mt-4">Para el cliente que quiere mayor control de sus finanzas y una ágil gestión de cobros y pagos, sin comisiones.</div>
+          <div class="mt-4 d-flex flex-column w-fit-content">
+            <div class="d-flex mb-3"><span class="price-number bold">0,00</span> €/mes</div>
+            <a href="/cuentas-y-tarjetas/#comparativa" class="c-button">COMPARAR CUENTAS</a>
+          </div>
+        </div>
+		    <div class="col-12 col-lg-4 offset-lg-1 col-xl-3">
+          {% include "_includes/callbox.twig" %}
+        </div>		
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container u-mt-2">
+      <div class="mb-5">
+        <div class="ml-0 mr-0 row">
+          <div class="row"> <img class="img-table-width h-auto mb-4 ml-3" src="../../assets/images/bancario.svg" alt="" /> </div>
+          <div class="row">
+            <div class="section-title col-lg-5 d-flex flex-column">
+              <h3 class="red-text mb-2">Operativa diaria</h3>
+              <div class="subtitle gray-text">Seremos su socio financiero: un verdadero asistente para planificar sus ingresos y gastos y sacar el máximo partido a su cuenta.</div>
+            </div>
+            <div class="col-lg-1"></div>
+            <div class="section-details col-lg-6">			
+            <div class="row">
+              <table class="w-100 table-mg-top mr-3 ml-3 mr-sm-0 ml-sm-0 ">
+                <tr>
+                  <td class="label-cell">Tarjeta de crédito Classic</td>
+                  <td class="data-cell"><img data-src="/assets/images/cuentas-y-tarjetas/classic-credito.jpg" class="mw-100 lazyloaded" alt="Classic Credito" src="/assets/images/cuentas-y-tarjetas/classic-credito.jpg"></td>
+                </tr>
+                <tr>
+                  <td class="label-cell">Límite de crédito mínimo (personalizable)</td>
+                  <td class="data-cell">1.500 €</td>
+                </tr>
+                <tr>
+                  <td class="label-cell">Tarjeta de débito</td>
+                  <td class="data-cell"><img data-src="/assets/images/cuentas-y-tarjetas/classic-debito.jpg" class="mw-100 lazyloaded" alt="Debito Classic" src="/assets/images/cuentas-y-tarjetas/classic-debito.jpg"></td>
+                </tr>
+                <tr>
+                  <td class="label-cell">Extracciones a débito en cualquier cajero</td>
+                  <td class="data-cell">1ª retirada mensual gratuita</td>
+                </tr>
+                <tr>
+                  <td class="label-cell">Transferencias zona Euro</td>
+                  <td class="data-cell">Gratuito</td>
+                </tr>
+                <tr>
+                  <td class="label-cell">Descubierto gratuito</td>
+                  <td class="data-cell">3 días</td>
+                </tr>
+                <tr>
+                  <td class="label-cell">Alertas SMS</td>
+                  <td class="data-cell"><img class="icon-check" src="../../assets/images/check.svg" alt="Incluido" /></td>
+                </tr>
+				        <tr>
+                  <td class="label-cell">Encendido/Apagado de tarjetas</td>
+                  <td class="data-cell"><img class="icon-check" src="../../assets/images/check.svg" alt="Incluido" /></td>
+                </tr>
+                <tr>
+                  <td class="label-cell">Envío de divisa a domicilio</td>
+                  <td class="data-cell">Gratuito</td>
+                </tr>
+              </table>
+			      </div>
+            </div>
+          </div>
+        </div>
+      </div>
+	  
+      <!-- <div class="mb-5">
+        <div class="ml-0 mr-0 row">
+          <div class="row"> <img class="img-table-width h-auto mb-4 ml-3" src="../../assets/images/bancario.svg" alt="" /> </div>
+          <div class="row">
+            <div class="section-title col-lg-5 d-flex flex-column">
+              <h3 class="red-text mb-2">Contabilidad doméstica</h3>
+              <div class="subtitle gray-text">Seremos su socio financiero: un verdadero asistente para planificar sus ingresos y gastos y sacar el máximo partido a su cuenta.</div>
+            </div>
+            <div class="col-lg-1"></div>
+            <div class="section-details col-lg-6">
+			<div class="row">
+              <table class="w-100 table-mg-top mr-3 ml-3 mr-sm-0 ml-sm-0 ">
+                <tr>
+                  <td class="label-cell">Categorización de movimentos</td>
+                  <td class="data-cell"><img class="icon-check" src="../../assets/images/check.svg" alt="Incluido" /></td>
+                </tr>
+                <tr>
+                  <td class="label-cell">Personalización de movimientos </td>
+                  <td class="data-cell"><img class="icon-check" src="../../assets/images/check.svg" alt="Incluido" /></td>
+                </tr>
+                <tr>
+                  <td class="label-cell">Resumen de ingresos y gastos </td>
+                  <td class="data-cell"><img class="icon-check" src="../../assets/images/check.svg" alt="Incluido" /></td>
+                </tr>			
+              </table>
+			  </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+	  
+     <!-- <div class="mb-5">
+        <div class="ml-0 mr-0 row">
+          <div class="row"> <img class="img-table-width h-auto mb-4 ml-3" src="../../assets/images/coche.svg" alt="" /> </div>
+          <div class="row">
+            <div class="section-title col-lg-5 d-flex flex-column">
+              <h3 class="red-text">Viajes y desplazamientos</h3>
+              <div class="description gray-text">Solo tiene que elegir el destino y viajar cómodamente y sin preocupaciones, con la asistencia más exquisita y la seguridad de que usted y los suyos tendrán el mayor respaldo en caso necesario.</div>
+            </div>
+            <div class="col-lg-1"></div>
+            <div class="section-details col-lg-6">
+              <div class="row">
+                <table class="w-100 table-mg-top mr-3 ml-3 mr-sm-0 ml-sm-0 ">
+				  <tr>
+                    <td class="label-cell">Bip & Drive (Telepeaje, y descuentos en gasolineras, parking, etc.)</td>
+                    <td class="data-cell">15 € + IVA</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mt-4 mb-4 d-flex justify-content-center align-items-center"> <img class="arrow-top" src="../../assets/images/flecha-subir.svg" alt="" /> </div>
+    </div>-->
+    <div class="row">
+      <div class="col-12">
+
+        <div class="c-texto-legal mt-5">
+          <p>0% TIN anual, 0% TAE. Ejemplo representativo de modalidad de pago total a fin de mes, disposición 1.500 €: T.I.N.: 0%; T.A.E.: 0%; Importe total del crédito: 1.500 €. Importe total adeudado: 1.500 €. Coste total del crédito: 0 €. Comisión de emisión de la tarjeta: 0 €. Contratarla es gratis y renovarla también cumpliendo condiciones</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-12">
+        <div class="c-contacto-legal">
+          <p>
+            <span>
+              Tel. +34 912909083</span>
+            <span class="divider">.</span>
+            <span>singularbank.es</span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="pt-4 pb-4 c-ctabox">
+    <div class="red-container w-100 text-center">
+      <a href="/cuentas-y-tarjetas/#comparativa" class="c-button c-button--outline">Cuentas Singular Bank</a>
+    </div>
+  </section>
+
+  <section class="w-100 aguila-background">
+    <div class="container row ml-0 mr-0 white-text">
+      <div class="pd-tb-95 pl-70 col-lg-7">
+        <div class="pb-4 text-uppercase subtitle-font-size">Usted elige, nosotros nos adaptamos.</div>
+        <h2 class="title-font-size">En Singular no tenemos cuentas, tenemos <span class="bold">sus</span> cuentas.</h2>
+        <a href="" class="c-button">Conozca la suya</a>
+      </div>
+      <div class="col-lg-5 phone-img-container">
+        <img class="h-auto" src="../../assets/images/telefono-img-2x.png" alt="" />
+      </div>
+      <div class="background-opacity"></div>
+    </div>
+  </section>
+</div>
+
+{% endblock %}

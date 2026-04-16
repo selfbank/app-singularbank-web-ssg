@@ -1,0 +1,20 @@
+blockquote {
+  font-family: 'lynstonelight';
+  @include typi(l);
+  font-style: italic;
+  color: $black;
+  padding-left: spacing(1);
+  padding-top: spacing(1);
+  margin-top: spacing(2);
+  margin-bottom: spacing(2);
+  background: url('../images/blockquote.png') no-repeat left top;
+
+  @include media-breakpoint-up(sm) {
+    padding-left: 150px;
+    padding-top: 0;
+    margin-top: spacing(4);
+    margin-bottom: spacing(4);
+  }
+
+  p {margin-bottom: 0;}
+}

@@ -1,0 +1,134 @@
+{% extends "_layouts/page-componentes.twig" %}
+{% block page %}
+
+<section class="section-listado">
+	<div class="container">
+    <div>
+      <a href="/componentes/index.html" class="link">
+        <svg width="14px" height="14px" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16">
+          <polygon fill-rule="evenodd" points="8.388 0 .667 8 8.388 16 9.084 15.278 2.525 8.482 16 8.482 16 7.461 2.58 7.461 9.084 .721"/>
+        </svg>
+
+        <span>volver</span>
+      </a>
+    </div>
+    
+  <p>Bloque persona destacado</p>
+  <div class="row">
+    <div class="col-12 col-md-4">
+      <div class="c-persona">
+        <a href="#" class="c-persona__image" type="button" data-toggle="modal" data-target="#javier-marin">
+          <img data-src="/assets/images/quienes-somos/JavierMarinH.jpg" class="w-100 lazyloaded" alt="Javier Marin" src="/assets/images/quienes-somos/JavierMarinH.jpg">
+          <span class="c-persona__btn">
+            <svg>
+              <use xlink:href="/assets/svg/sprite/sprite.svg#plus"></use>
+            </svg>
+          </span>
+        </a>
+        <h3 class="c-persona__title">Javier Marín Romano</h3>
+        <p class="c-persona__position">Consejero Delegado</p>
+
+        <div class="c-persona__modal modal fade" id="javier-marin" tabindex="-1" role="dialog" aria-labelledby="personaModalTitle" aria-hidden="true">
+          <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                <a href="#" type="button" class="c-persona__image close" data-dismiss="modal" aria-label="Close">
+                  <span class="c-persona__btn">
+                    <svg>
+                      <use xlink:href="/assets/svg/sprite/sprite.svg#plus"></use>
+                    </svg>
+                  </span>
+                </a>
+                <div class="row no-gutters">
+                  <div class="col-lg-5 overflow-hidden">
+                    <img data-src="/assets/images/quienes-somos/JavierMarinV.jpg" class="c-persona__modal__image lazyload h-100" alt="Javier Marin">
+                  </div>
+                  <div class="col-lg-7">
+                    <div class="row no-gutters c-persona__modal__container">
+                      <div class="col-lg-12 u-mb-base">
+                        <h3 class="c-persona__title">Javier Marín Romano</h3>
+                        <p class="c-persona__position">Consejero Delegado</p>
+                      </div>
+                      <div class="col-lg-12 c-persona__modal__text">
+                        <p>Anteriormente ha ocupado, entre otros, los siguientes cargos:</p>
+                        <ul>
+                          <li>Consejero Delegado de Banco Santander</li>
+                          <li>Director General de Banca Privada Gestión de Activos y Seguros en Banco Santander</li>
+                          <li>Consejero Delegado de Banco Banif</li>
+                          <li>Fundador y consejero de Allfunds Bank</li>
+                          <li>Jefe de Gabinete de la Presidencia de Banco Santander</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="divider"></div>
+
+  <p>Bloque persona default</p>
+
+  <div class="row">
+    <div class="col-md-4">
+
+      <div class="c-persona c-persona--half">
+
+        <a href="#" class="c-persona__image" type="button" data-toggle="modal" data-target="#david-bellamy">
+          <img data-src="/assets/images/quienes-somos/DavidBellamyH.jpg" class="w-100 lazyloaded" alt="David Bellamy" src="/assets/images/quienes-somos/DavidBellamyH.jpg">
+          <span class="c-persona__btn">
+            <svg>
+              <use xlink:href="/assets/svg/sprite/sprite.svg#plus"></use>
+            </svg>
+          </span>
+        </a>
+        <h3 class="c-persona__title">David Bellamy</h3>
+        <p class="c-persona__position">Presidente no ejecutivo del área internacional de St. James´s Place PLc y de Weatherbys Bank Ltd.</p>
+
+        <div class="c-persona__modal modal fade" id="david-bellamy" tabindex="-1" role="dialog" aria-labelledby="personaModalTitle" aria-hidden="true">
+          <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                <a href="#" type="button" class="c-persona__image close" data-dismiss="modal" aria-label="Close">
+                  <span class="c-persona__btn">
+                    <svg>
+                      <use xlink:href="/assets/svg/sprite/sprite.svg#plus"></use>
+                    </svg>
+                  </span>
+                </a>
+                <div class="row no-gutters">
+                  <div class="col-lg-5 overflow-hidden">
+                    <img data-src="/assets/images/quienes-somos/DavidBellamyV.jpg" class="c-persona__modal__image lazyload h-100" alt="David Bellamy">
+                  </div>
+                  <div class="col-lg-7">
+                    <div class="row no-gutters c-persona__modal__container">
+                      <div class="col-lg-12 u-mb-base">
+                        <h3 class="c-persona__title">David Bellamy</h3>
+                        <p class="c-persona__position">Presidente no ejecutivo del área internacional de St. James´s Place PLc y de Weatherbys Bank Ltd</p>
+                      </div>
+                      <div class="col-lg-12 c-persona__modal__text">
+                        <p>Anteriormente, fue uno de los fundadores de St. James´s Place y su Consejero Delegado.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      
+    </div>
+  </div>
+<div class="divider"></div>
+
+  </div>
+</section> 
+{% endblock %}

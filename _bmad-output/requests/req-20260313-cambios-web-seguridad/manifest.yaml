@@ -1,0 +1,13 @@
+correlation_id: "req-20260313-cambios-web-seguridad"
+created_at: "2026-04-07T18:00:00Z"
+source_type: "eml"
+source_files:
+  - "source/Cambios-web-Seguridad-por-que-Singular.eml"
+detected_request_items:
+  - "Seguridad: sustituir bloque Alertas Self Protect / Singular Protect por texto Protección Singular; ajustar Programa IBM y título Registro de navegador"
+  - "Por qué Singular Bank: quitar dos viñetas (IBM Trusteer, Singular Protect); añadir viñeta Protección Singular"
+author_hint: "ismael.diaz@singularbank.es"
+similar_past_case: null
+notes: >
+  Origen: copia local del .eml en sb-www/docs. Incluye capturas PNG incrustadas (cid:);
+  la decisión de diseño debe contrastarse con esas imágenes al implementar.

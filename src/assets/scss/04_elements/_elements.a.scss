@@ -1,0 +1,10 @@
+a {
+  color: $red;
+  text-decoration: underline;
+
+  &:hover {
+    /*color: darken($red, 10%);*/
+    color: $red;
+    text-decoration: none;
+  }
+}

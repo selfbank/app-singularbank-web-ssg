@@ -1,0 +1,51 @@
+<header class="c-header">
+  <div class="c-header__top d-none d-md-flex">
+    <a class="c-header__top__link {{activeMenu('example',currentMenu)}}" href="/oficinas-y-contacto/">Oficinas y contacto</a>
+    <a href="https://clientes.selfbank.es/conexion/asesoramiento" target="_blank" class="c-header__top__link c-header__top__button">Área Clientes</a>
+  </div>
+
+  <nav class="c-header__nav navbar navbar-expand-lg navbar-light">
+    <a class="c-header__nav__logo navbar-brand" href="/">
+      {# <img src="/assets/images/logo-singular-bank.svg" alt="Singular Bank"/> #}
+      <img src="/assets/images/sb-logo-n.svg" alt="Singular Bank"/>
+    </a>
+
+    <button class="navbar-toggler collapsed js-open" type="button" data-toggle="collapse" data-target="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon">
+        <span class="navbar-toggler-icon__open"> {{svgSprite('hamburguer')}}</span>
+        <span class="navbar-toggler-icon__close"> {{svgSprite('plus')}}</span>
+      </span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <div class="c-header__navbar--container">
+        <ul class="c-header__navbar navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link {{activeMenu('quienes-somos',currentMenu)}}" href="/quienes-somos">Quiénes somos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {{activeMenu('porque-singular-bank',currentMenu)}}" href="/porque-singular-bank">Por qué Singular Bank</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {{activeMenu('soluciones-financieras',currentMenu)}}" href="/soluciones-financieras">Soluciones Financieras</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {{activeMenu('su-banquero',currentMenu)}}" href="/su-banquero">Su Banquero</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {{activeMenu('noticias',currentMenu)}}" href="/noticias">Noticias</a>
+          </li>
+          <!--li class="nav-item">
+            <a class="nav-link {{activeMenu('noticias-eventos',currentMenu)}}" href="/noticias-eventos">Noticias y Eventos</a>
+          </li-->
+          <li class="nav-item d-md-none">
+            <a class="nav-link {{activeMenu('contacto',currentMenu)}}" href="/oficinas-y-contacto">Oficinas y contacto</a>
+          </li>
+          <li class="nav-item d-md-none">
+            <a class="nav-link" href="https://clientes.selfbank.es/conexion/asesoramiento" target="_blank">Área Privada</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

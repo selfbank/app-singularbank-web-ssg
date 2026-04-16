@@ -1,0 +1,33 @@
+.c-callbox {
+  padding: spacing(base);
+  background: $gray-light;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-top: spacing(1);
+
+  @include media-breakpoint-only(lg) {
+    margin-top: 0;
+  }
+
+  p {
+    @include typi(normal);
+    color: $gray-dark;
+    margin-bottom: spacing(base);
+  }
+
+  strong {
+    font-family: 'lynstone', Arial, sans-serif;
+    font-weight: normal;
+    color: $red;
+  }
+
+  .c-button {
+    align-self: center;
+  }
+
+  svg {
+    width: 72px;
+    height: 72px;
+  }
+}

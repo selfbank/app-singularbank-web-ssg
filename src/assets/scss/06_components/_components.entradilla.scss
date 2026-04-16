@@ -1,0 +1,11 @@
+.c-entradilla {
+  font-family: 'lynstonelight', Arial, sans-serif;
+  font-weight: normal;
+  @include typi(xxl);
+
+  @include media-breakpoint-only(xs) {
+    margin-bottom: 0;
+  }
+
+
+}

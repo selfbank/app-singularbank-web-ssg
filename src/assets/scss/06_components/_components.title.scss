@@ -1,0 +1,26 @@
+.c-title--pre {
+  font-family: 'lynstonelight', sans-serif;
+  font-weight: normal;
+  @include typi(s);
+  margin-bottom: spacing(-2);
+  color: $gray;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.c-news__antetitle {
+ color: $red;
+}
+
+.c-title--sub {
+  font-family: 'lynstonelight', sans-serif;
+  font-weight: normal;
+  @include typi(lplus);
+  margin-bottom: 0;
+}
+
+.legal__title {
+  margin-top: spacing(3);
+  border-top: 1px solid #333;
+  padding-top: spacing(-3);
+}

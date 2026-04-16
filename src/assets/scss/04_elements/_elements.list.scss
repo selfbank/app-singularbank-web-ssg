@@ -1,0 +1,47 @@
+ol {
+  padding-left: spacing(-1);
+  color: $red;
+  span {
+    color: $red;
+  }
+
+  li {
+    margin-bottom: spacing(-2);
+  }
+
+  p {
+    color: $black;
+    margin-bottom: 0;
+  }
+}
+
+ul {
+  padding-left: spacing(-1);
+  margin-bottom: spacing(base);
+
+  li {
+    list-style-image: url('../images/circle-list-gray-light.svg');
+    padding-left: spacing(-4);
+    margin-bottom: spacing(-2);
+  }
+
+  strong {
+    font-family: 'lynstonebold', sans-serif;
+  }
+
+  li ul {
+    padding-left: 0;
+    margin-top: spacing(-3);
+    border-top: 1px solid #ccc;
+    margin-top: spacing(-2);
+    padding-top: spacing(-2);
+  }
+
+  li ul li {
+    padding-left: 0;
+    list-style: none;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: spacing(-2);
+    padding-bottom: spacing(-2);
+  }
+}

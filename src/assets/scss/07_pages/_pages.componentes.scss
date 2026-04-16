@@ -1,0 +1,31 @@
+.header {
+  padding: 40px 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+
+  h2 {
+     @include typi(l);
+     margin: 0;
+  }
+}
+
+.c-header__nav__logo {
+  height: 65px;
+  margin-right: 60px;
+}
+
+.section-listado {
+  padding: 40px 0;
+
+  h2 {
+     @include typi(l);
+  }
+
+  .link {
+    margin-bottom: 25px;
+    display: block;
+    text-decoration: none;
+  }
+}

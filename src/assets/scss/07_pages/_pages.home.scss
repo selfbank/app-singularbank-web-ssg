@@ -1,0 +1,46 @@
+#carouselHero.c-carousel {
+  overflow: hidden;
+  margin-bottom: spacing(4);
+
+  .carousel-inner .carousel-item {
+    height: 100vh;
+    min-height: 600px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    img {
+      min-width: 100%;
+      height: 100%;
+    }
+  }
+
+  .carousel-caption {
+    text-align: left;
+    left: 5%;
+    bottom: auto;
+    right: auto;
+    top: 35%;
+	color: $black;
+    @include typi(hero);
+    font-family: 'lynstonelight';
+
+    @include media-breakpoint-up(lg) {
+      font-size: 220px;
+    }
+
+
+    .carousel-title {
+      font-size: inherit;
+    }
+  }
+}
+
+.page-index {
+  .c-background {
+    padding-bottom: spacing(1);
+    @include media-breakpoint-up(md) {
+      padding-bottom: spacing(3);
+    }
+  }
+}

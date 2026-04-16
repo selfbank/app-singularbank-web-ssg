@@ -1,0 +1,25 @@
+## LANDING
+/bienvenida/ /
+
+https://asesoramientoselfbank.netlify.com/* https://www.singularbank.es/:splat 301!
+https://asesoramiento.selfbank.es/* https://www.singularbank.es/:splat 301!
+https://www.singularbank.com/* https://www.singularbank.es/:splat 301!
+
+http://asesoramientoselfbank.netlify.com/* https://www.singularbank.es/:splat 301!
+http://asesoramiento.selfbank.es/* https://www.singularbank.es/:splat 301!
+http://www.singularbank.com/* https://www.singularbank.es/:splat 301!
+http://www.singularbank.es/* https://www.singularbank.es/:splat 301!
+
+
+
+https://singularbank.com/* https://www.singularbank.es/:splat 301!
+https://singularbank.es/* https://www.singularbank.es/:splat 301!
+
+http://singularbank.com/* https://www.singularbank.es/:splat 301!
+http://singularbank.es/* https://www.singularbank.es/:splat 301!
+doc/legal/EstadofinancieraSingularBank_ES.pdf https://www.singularbank.es/:splat 301!
+
+https://www.singularbank.es/doc/legal/EstadofinancieraSingularBank_ES.pdf https://www.singularbank.es:splat 301!
+https://www.singularbank.es/doc/legal/gob-corp/IRP_2022_SingularBank_vDEF_ESP.pdf https://www.singularbank.es:splat 301!
+https://www.singularbank.es/doc/legal/gob-corp/IRP_2023_SingularBank_ES.pdf https://www.singularbank.es:splat 301!
+https://www.singularbank.es/doc/legal/EINF2023_SingularBank_.pdf https://www.singularbank.es:splat 301!

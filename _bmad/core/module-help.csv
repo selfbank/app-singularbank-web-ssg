@@ -1,0 +1,6 @@
+module,skill,display-name,menu-code,description,action,args,phase,after,before,required,output-location,outputs
+Core,bmad-help,BMad Help,BH,,,anytime,,,false,,
+Core,bmad-init,BMad Init,BI,,,anytime,,,false,,
+Core,bmad-change-request,Change request,CR,"Step 1: scaffold request folder under _bmad-output/requests, manifest, source/.",,anytime,,,false,{output_folder}/requests,request folder
+Core,bmad-change-discovery,Change Discovery,CD,Step 2: discovery.md and repo mapping without patches.,,anytime,,,false,{output_folder}/requests,discovery.md
+Core,bmad-change-proposal,Change Proposal,CP,Step 3: proposal/ drafts; update lessons learned on close.,,anytime,,,false,{output_folder}/requests,proposal artifacts

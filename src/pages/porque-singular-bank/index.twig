@@ -1,0 +1,74 @@
+{% extends "_layouts/page.twig" %}
+{% block page %}
+
+<section class="c-hero c-hero--porque-singular-bank">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-lg-8">
+        <div class="c-hero__container">
+          <h1>Centrados en el cliente y con las mejores herramientas tecnológicas</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="c-background--lighter" id="mision-vision">
+  <div class="container">
+    {% include "porque-singular-bank/mision-vision.twig" %}
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    {% include "porque-singular-bank/centrados.twig" %}
+  </div>
+</section>
+
+<section class="c-background u-mb-4" id="seguridad">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-4 order-md-12 col-lg-4 col-xl-5 offset-xl-1 u-mb-1 d-none d-lg-block">
+        <img data-src="/assets/images/seguridades.jpg" class="w-100 lazyload" alt="Seguridad" />
+      </div>
+      <div class="col-12 col-md-8 col-lg-8 col-xl-6">
+        <h2>La seguridad por encima de todo</h2>
+        <p>Trabajamos y trabajaremos siempre para garantizar la máxima seguridad a nuestros clientes:</p>
+        <ul>
+          <li><strong>Protección Singular:</strong> aviso por SMS de las compras realizadas con tarjeta por importes elevados o en otros países.</li>
+          <li><strong>Documentación digital</strong>, evitando los riesgos del correo.</li>
+          <li><strong>Claves de acceso y operativas</strong>: con distintos niveles de seguridad que se adaptan en función de la operación a realizar.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="tecnologia">
+  <div class="container">
+    <div class="row u-mb-3">
+      <div class="col-12 col-md-4 col-lg-4 col-xl-6 u-mb-1">
+        <img data-src="/assets/images/servicios-digitales.jpg" class="w-100 lazyload" alt="Servicios Digitales" />
+      </div>
+      <div class="col-12 col-md-8 col-lg-8 col-xl-5 offset-xl-1">
+        <h2 class="mt-xl-8">La mejor tecnología al servicio del cliente</h2>
+        <p>Con una plataforma de valor añadido, eliminando burocracia innecesaria y ofreciendo servicios y herramientas que permitan al cliente ahorrar tiempo y esfuerzos y le ayuden en su día a día.</p>
+        <p>Omnincanalidad, para que el cliente decida la forma más adecuada de relacionarse con su banco.</p>
+        <!--a href="#" class="c-button">Más información</a-->
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="valores">
+  <div class="container">
+  <h2>Nuestro código</h2>
+    {% include "porque-singular-bank/nuestros-valores.twig" %}
+  </div>
+</section>
+
+
+{% include "_includes/ctabox.twig" %}
+
+
+{% endblock %}

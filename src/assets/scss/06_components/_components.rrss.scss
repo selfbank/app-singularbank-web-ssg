@@ -1,0 +1,23 @@
+.c-rrss {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    width: 24px;
+    height: 24px;
+    margin-right: spacing(-1);
+
+    a {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+    }
+
+    svg {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}

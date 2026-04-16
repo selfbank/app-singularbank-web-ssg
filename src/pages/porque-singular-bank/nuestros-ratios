@@ -1,0 +1,32 @@
+<section class="c-background c-background--lighter u-mb-4">
+  <div class="container">
+    <h2>Nuestros ratios</h2>
+    <div class="row">
+      <div class="col-12 col-md-5">
+        <span class="c-cifra">1,32%</span>
+      </div>
+      <div class="col-12 col-md-7 u-mb-2">
+        <h3>Ratio de morosidad</h3>
+        <p>Es el porcentaje que representan los créditos dudosos de una entidad sobre el total de la cartera de créditos. El mejor ratio de morosidad es el 0% y la media de la banca española es del 10,01% (dato de cierre del 1S2016).</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-md-5">
+        <span class="c-cifra">80%</span>
+      </div>
+      <div class="col-12 col-md-7 u-mb-2">
+        <h3>Ratio de liquidez</h3>
+        <p>La liquidez indica en qué medida es fácilmente convertible en dinero el activo del banco y, por tanto, en qué plazo va a ser capaz de hacer frente a sus obligaciones.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-md-5">
+        <span class="c-cifra">25,78%</span>
+      </div>
+      <div class="col-12 col-md-7 u-mb-2">
+        <h3>Ratio de solvencia</h3>
+        <p>El ratio de solvencia compara el capital propio con los activos. El coeficiente mínimo que exige el Banco de España a las entidades financieras es un 9%. *Dato a 30/06/2017.</p>
+      </div>
+    </div>
+  </div>
+</section>

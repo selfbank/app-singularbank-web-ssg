@@ -1,0 +1,8 @@
+node_modules
+build-dev
+.idea
+.DS_Store
+npm-debug.log
+
+# Combo α: fuentes crudas por petición (correo, adjuntos) bajo requests/*/source/
+_bmad-output/requests/*/source/

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es-es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Noticias e información de actualidad | Singular Bank</title>
+    <meta name="title" content="Noticias e información de actualidad | Singular Bank" />
+    <meta name="description" content="Noticias de actualidad, eventos, información y última hora de Singular Bank en los diferentes medios de comunicación. Conozca todas las novedades.">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <!-- inject:css -->
+        <!-- endinject -->
+
+        <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="98cee65a-bf3d-4f8e-8f4c-ff8cbc1133e4" data-blockingmode="auto" type="text/javascript"></script>
+
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-5N54TTF');</script>
+        <!-- End Google Tag Manager -->
+
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-P65Q4L');</script>
+        <!-- End Google Tag Manager -->
+
+    </head>
+    <body class="page-{{currentMenu}} page-noticia">
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5N54TTF"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P65Q4L"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+
+        {% block body %}
+        {% endblock %}
+        <!-- inject:vendors:js -->
+        <!-- endinject -->
+        <!-- inject:js -->
+        <!-- endinject -->
+
+        <script>
+        function setCookie(cname, cvalue, exdays) {
+          var d = new Date();
+          d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+          var expires = "expires="+d.toUTCString();
+          document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        }
+
+        function getCookie(cname) {
+          var name = cname + "=";
+          var ca = document.cookie.split(';');
+          for(var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+              c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+              return c.substring(name.length, c.length);
+            }
+          }
+          return "";
+        }
+
+        function checkCookies() {
+          var consented = Cookiebot.consented;
+          if(consented == true){
+
+            var web = getCookie("web");
+            if (web == "true") {
+              if(window.location.pathname === "/"){
+                window.location.href = "/home/";
+              }
+
+            } else {
+              if(window.location.pathname != "/"){
+                setCookie("web", true, 365);
+              }
+
+            }
+          }
+        }
+        checkCookies();
+        </script>
+
+    </body>
+</html>

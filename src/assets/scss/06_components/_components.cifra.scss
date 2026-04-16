@@ -1,0 +1,22 @@
+.c-cifra {
+  font-family: 'lynstonelight', Arial, sans-serif;
+  font-weight: normal;
+  color: $red;
+  display: block;
+  margin-bottom: spacing(-1);
+  @include typi(xhero);
+
+  @include media-breakpoint-up(md) {
+    text-align: right;
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: 100px;
+    line-height: 105px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    font-size: 160px;
+    line-height: 135px;
+  }
+}

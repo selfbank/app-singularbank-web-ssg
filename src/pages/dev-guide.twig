@@ -1,0 +1,21 @@
+{% extends "_layouts/page.twig" %}
+{% set title = "Guia de páginas y componentes" %}
+{% block page %}
+    <div class="container">
+        <h3>Guia de páginas y componentes</h3>
+        <h4>Páginas</h4>
+        <ul>
+            {% for item in pageList %}
+                <li><a href="{{ item.href }}">{{ item.label }}</a></li>
+            {% endfor %}
+        </ul>
+        <h4>Componentes</h4>
+        <ul>
+            {% for value in componentList %}
+                <li><a href="components/{{ value }}.html">{{ value }}</a></li>
+            {% endfor %}
+        </ul>
+        <h3><a href="/assets/svg/sprite/sprite.symbol.html">SVG SPRITES</a></h3>
+        <p>{{svgSprite('NOMBRE_ICONO')}}</p>
+       </div> 
+{% endblock %}

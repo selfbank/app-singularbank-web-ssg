@@ -1,0 +1,32 @@
+.c-icontext {
+  text-align: center;
+  margin-bottom: spacing(1);
+
+  p {
+    margin-bottom: spacing(base);
+
+  }
+
+  @include media-breakpoint-up(md) {
+    text-align: left;
+  }
+
+  svg {
+    width: 80px;
+    height: 80px;
+
+    @include media-breakpoint-up(xl) {
+      width: 120px;
+      height: 120px;
+    }
+  }
+}
+
+.c-icontext__title {
+  font-family: 'lynstone', sans-serif;
+  font-weight: normal;
+  @include typi(m);
+  margin-top: spacing(base);
+  margin-bottom: spacing(-3);
+  color: $red;
+}

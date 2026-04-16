@@ -1,0 +1,173 @@
+/* HERO */
+
+.p-bienvenida {
+  padding-top: spacing(4);
+
+  @include media-breakpoint-up(md) {
+    padding-top: 150px;
+  }
+}
+
+.p-bienvenida-hero {
+  background: #f2f2f2 url("../images/bienvenida/bk-hero.jpg") right top no-repeat;
+  background-size: cover;
+  padding: 80px 30px;
+
+  @include media-breakpoint-up(md) {
+    padding: 215px 60px;
+    background-position: center top;
+  }
+}
+
+.p-bienvenida-hero__title {
+  @include typi(xxl);
+  color: $red;
+  line-height: 1.4;
+  margin-bottom: 0;
+  text-align: right;
+}
+
+/* SEPARATOR */
+.p-bienvenida-separator {
+  display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 49%, rgba(198,53,39,1) 50%, rgba(255,255,255,1) 51%, rgba(255,255,255,1) 100%);
+}
+
+.p-bienvenida-separator__logo {
+  width: 90px;
+  padding: 0 20px;
+  background: white;
+
+  svg {
+    width: 100%;
+  }
+}
+
+
+/* ACCESS */
+.p-bienvenida-access {
+  background: #f2f2f2;
+  padding: 60px 20px;
+  transform: perspective(1px) translateZ(0);
+  position: relative;
+  transition-property: color;
+  transition-duration: 0.3s;
+
+  color: $black !important;
+  transition: all .3s ease;
+  text-decoration: none;
+
+  &:hover {
+    color: $red !important;
+    text-decoration: none;
+  }
+
+  @include media-breakpoint-down(md) {
+    border-bottom: 8px solid $red;
+  }
+
+  @include media-breakpoint-up(md) {
+    padding: 120px 0;
+  }
+
+  &.p-bienvenida-access--private {
+    background: #f2f2f2 url("../images/bienvenida/bk-private-sm.jpg") right center no-repeat;
+    background-size: 80%;
+
+    @include media-breakpoint-up(md) {
+      background: #f2f2f2 url("../images/bienvenida/bk-private.jpg") center center no-repeat;
+      background-size:auto;
+    }
+
+    @include media-breakpoint-up(xl) {
+      background-position: right center;
+      background-size: cover;
+    }
+  }
+
+  &.p-bienvenida-access--public {
+    background: #f2f2f2 url("../images/bienvenida/bk-public-sm.jpg") right center no-repeat;
+    background-size: 80%;
+
+    @include media-breakpoint-up(md) {
+      background: #f2f2f2 url("../images/bienvenida/bk-public.jpg") center center no-repeat;
+      background-size:auto;
+    }
+
+    @include media-breakpoint-up(xl) {
+      background-position: left center;
+      background-size: cover;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $red;
+    transform: scaleY(0);
+    transform-origin: 50% 100%;
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+  }
+
+  &:hover {
+    text-decoration: none;
+
+    &::before {
+      transform: scaleY(.03);
+    }
+
+    .p-bienvenida-access__title {
+      color: $black;
+    }
+
+    .p-bienvenida-access__subtitle {
+      color: $gray;
+    }
+  }
+}
+
+.p-bienvenida-access__title {
+  font-family: 'lynstonelight', Arial, sans-serif;
+  font-weight: normal;
+  @include typi(xl);
+
+  &:hover {
+    color: $red !important;
+  }
+
+}
+
+.p-bienvenida-access__subtitle {
+  font-weight: normal;
+  @include typi(mplus);
+  color: $gray;
+  display: inline-block;
+  border-bottom: 1px solid $red;
+}
+
+
+.p-bienvenida__video {
+  iframe {
+    width: 100%;
+    height: 380px;
+
+    @include media-breakpoint-up(md) {
+      height: 480px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      height: 760px;
+    }
+  }
+}

@@ -1,0 +1,130 @@
+// PRODUCT
+.c-product {
+  background: $gray-light;
+}
+
+.c-product__title {
+  font-family: 'lynstonelight', sans-serif;
+  font-weight: normal;
+  @include typi(lplus);
+  margin-top: spacing(4);
+  margin-bottom: spacing(1);
+
+  @include media-breakpoint-down(md) {
+    margin-left: spacing(1);
+  }
+}
+
+.c-product__item {
+  padding: spacing(base) spacing(-2) spacing(base) spacing(1);
+}
+
+.c-product__item__title {
+  font-family: 'lynstonebold', sans-serif;
+  color: $black-dark;
+  margin-bottom: spacing(-2);
+
+  svg {
+    width: 48px;
+    height: 48px;
+    margin-right: spacing(base);
+  }
+}
+
+.c-product__item__desc {
+  color: $gray-dark;
+}
+
+.c-product--carousel {
+  height: 100%;
+
+  .carousel-inner,
+  .carousel-item {
+    height: 100%;
+
+    img {min-width: 100%;}
+  }
+
+  .carousel-indicators {
+    background: $white;
+    right: auto;
+    bottom: 80px;
+    margin: 0;
+    width: 100%;
+    height: 80px;
+    justify-content: center;
+	  align-items: center;
+
+    @include media-breakpoint-up(lg) {
+      width: 50%;
+      bottom: 0;
+    }
+
+    li {
+      background-color: $red;
+      margin-bottom: 0;
+    }
+  }
+
+  .carousel-indicators--bottom{
+    bottom: 0;
+
+  }
+}
+
+.c-product__link {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  background: $red;
+  height: 80px;
+  justify-content: center;
+  align-items: center;
+  color: $white;
+  text-decoration: none;
+  font-family: 'lynstonelight', sans-serif;
+
+  @include media-breakpoint-up(lg) {
+    width: 50%;
+  }
+
+  &:before {
+    content: ">";
+    color: $white;
+    font-size: 36px;
+    transform: scaleY(1.3);
+    margin-right: 16px;
+    margin-top: -8px;
+  }
+
+  &:hover {
+    background: darken($red, 10%);
+    color: $white;
+  }
+}
+
+
+.c-product--list{
+  width: 100%;
+  position: relative;
+  svg{
+    width: 24px;
+    height: 24px;
+    margin-right: spacing(-2);
+    @include media-breakpoint-up(lg) {
+      margin-right: spacing(-1);
+    }
+
+  }
+}
+.c-product--list__item {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.c-product--list__item__z-index {
+  z-index: 15;
+}

@@ -1,0 +1,18 @@
+.c-contacto-legal {
+  padding: spacing(base) 0 spacing(1) ;
+  border-top: 1px solid $gray-light;
+  text-align: center;
+
+  p {
+    margin: 0 auto;
+    @include typi(s);
+    
+    span {
+      color: $red;
+
+      &.divider {
+        margin: 0 spacing(-1);
+      }
+    }
+  }
+}

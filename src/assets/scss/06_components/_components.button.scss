@@ -1,0 +1,32 @@
+.c-button {
+  @include typi(normal);
+  font-family: 'lynstonelight';
+  letter-spacing: 1px;
+  border-radius: 100px;
+  padding: spacing(-1) spacing(base);
+  background: $red;
+  color: $white;
+  text-decoration: none;
+  display: inline-block;
+  transition: all .3s ease;
+
+  &:hover {
+    text-decoration: none;
+    color: $white;
+    background: darken($red, 10%);
+  }
+}
+
+.c-button--outline {
+  background: transparent;
+  border: 2px solid #B2B2B2;
+  color: $gray-dark;
+  font-weight: bold;
+
+  &:hover {
+    text-decoration: none;
+    color: $white;
+    background: $gray-dark;
+    border-color: $gray-dark;
+  }
+}

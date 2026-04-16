@@ -1,0 +1,25 @@
+// Custom spacer
+$spacing: (
+   -4: 4px,
+   -3: 8px,
+   -2: 12px,
+   -1: 16px,
+   base: 24px,
+   1: 36px,
+   2: 48px,
+   3: 64px,
+   4: 96px
+);
+
+// Bootstrap spacer
+$spacers: (
+   0: 0,
+   1: $spacer * 0.25,
+   2: $spacer * 0.5,
+   3: $spacer,
+   4: $spacer * 1.5,
+   5: $spacer * 3,
+   6: $spacer * 4,
+   7: $spacer * 6,
+   8: $spacer * 7
+);

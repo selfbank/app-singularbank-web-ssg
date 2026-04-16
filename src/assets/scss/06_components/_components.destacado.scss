@@ -1,0 +1,52 @@
+.c-destacado {
+  padding: spacing(base);
+  background: $gray-light;
+}
+
+//datos destacados en quienes somos
+
+.datos-destacaddos_block {
+  h2 {
+    @include typi(l);
+
+    span {
+        @include typi(s);
+    }
+  }
+}
+
+.datos-destacados {
+  display: flex;
+  justify-content: center;
+  margin:30px  40px;
+
+}
+
+.datos-destacados_item {
+  margin: 0 40px;
+  text-align: center;
+
+  span {
+      display: block;
+    }
+
+    .num-destacado {
+        @include typi(l);
+        color: $red;
+        font-weight: bold;
+    }
+
+    .codigo {
+      font-weight: bold;
+    }
+}
+
+
+.datos-destacados_txt {
+  @include typi(s);
+  p {
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-family: "lynstonebold";
+  }
+}

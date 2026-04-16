@@ -1,0 +1,10 @@
+# Metadatos de la petición (rellenar en cada intake)
+correlation_id: "req-YYYYMMDD-slug"
+created_at: "ISO-8601"
+source_type: "eml|markdown|pdf|image|slack_export|plain_text|other"
+source_files:
+  - "source/ejemplo.eml"
+detected_request_items: []
+author_hint: null
+similar_past_case: null
+notes: null

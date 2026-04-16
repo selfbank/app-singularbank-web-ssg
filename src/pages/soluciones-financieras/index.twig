@@ -1,0 +1,48 @@
+{% extends "_layouts/page.twig" %}
+{% block page %}
+
+<section class="c-hero c-hero--soluciones">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-lg-8">
+        <div class="c-hero__container">
+          <h1>No hay dos patrimonios iguales, no hay dos clientes iguales</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="nuestros-servicios">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-12 col-lg-9 col-xl-8">
+        <h2>Tres modelos de servicio</h2>
+        <p>Actuamos como un copiloto en la gestión de las finanzas de nuestros clientes. Ofrecemos <strong>tres niveles de servicio</strong>, con un denominador común: buscar siempre lo mejor para nuestros clientes, escuchándoles y adaptándonos a la singularidad de sus vidas, de sus expectativas y de sus necesidades.</p>
+      </div>
+    </div>
+
+    {% include "soluciones-financieras/modelos-servicio.twig" %}
+
+  </div>
+</section>
+
+<section id="soluciones-financieras">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-12 col-lg-9 col-xl-8">
+        <h2>Con servicios que cubren todas sus necesidades</h2>
+      </div>
+    </div>
+
+    {% include "soluciones-financieras/servicios-necesidades.twig" %}
+
+  </div>
+</section>
+
+
+{% include "soluciones-financieras/banner.twig" %}
+{% include "_includes/ctabox.twig" %}
+
+
+{% endblock %}

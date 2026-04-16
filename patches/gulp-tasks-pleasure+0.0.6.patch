@@ -1,0 +1,95 @@
+diff --git a/node_modules/gulp-tasks-pleasure/package.json b/node_modules/gulp-tasks-pleasure/package.json
+index 0000000..0000000 100644
+--- a/node_modules/gulp-tasks-pleasure/package.json
++++ b/node_modules/gulp-tasks-pleasure/package.json
+@@ -33,7 +33,6 @@
+     "gulp-rename": "^1.4.0",
+     "gulp-sass": "^3.2.1",
+     "gulp-sass-glob": "^1.0.9",
+-    "gulp-sass-lint": "^1.4.0",
+     "gulp-size": "2.1.x",
+     "gulp-sourcemaps": "^2.6.4",
+     "gulp-svg-sprite": "^1.5.0",
+diff --git a/node_modules/gulp-tasks-pleasure/gulp-tasks/twigpages.js b/node_modules/gulp-tasks-pleasure/gulp-tasks/twigpages.js
+index 5030e28..8df9792 100644
+--- a/node_modules/gulp-tasks-pleasure/gulp-tasks/twigpages.js
++++ b/node_modules/gulp-tasks-pleasure/gulp-tasks/twigpages.js
+@@ -21,8 +21,8 @@
+     }
+     var sources = function() {
+         return gulp.src([
+-            path.join(options.baseDestination, '/assets/js/*.js'),
+-            path.join(options.baseDestination, '/assets/css/*.css')]
++            path.join(options.baseDestination, 'assets/js/*.js'),
++            path.join(options.baseDestination, 'assets/css/*.css')]
+             , {read: false})
+      
+     }
+@@ -93,7 +93,7 @@
+         })
+         //Save files.
+         .pipe(plugins.inject(sources(),{ignorePath:'/' + options.baseDestination + '/'}))
+-        .pipe(plugins.inject(gulp.src([path.join(options.baseDestination, '/assets/js/vendors/*.js')], {read: false}), {starttag: '<!-- inject:vendors:{{ext}} -->',ignorePath:'/' + options.baseDestination + '/'}))
++        .pipe(plugins.inject(gulp.src([path.join(options.baseDestination, 'assets/js/vendors/*.js')], {read: false}), {starttag: '<!-- inject:vendors:{{ext}} -->',ignorePath:'/' + options.baseDestination + '/'}))
+         .pipe(options.production ? plugins.htmlmin({ collapseWhitespace: true ,removeComments:true}) : plugins.util.noop())
+         .pipe(plugins.flatten({ includeParents: -1} ))
+         .pipe(gulp.dest(options.twigPages.destination));
+@@ -130,14 +130,26 @@
+             //Define empty variable for page list.
+             let pageList = [];
+             //Iterate over source files.
+-            let pageListFiles =  glob.sync(options.twigPages.src);
+-            pageListFiles.forEach(function(file){
+-                //If index exits
+-                if(path.parse(file)['name'] !== "index") {
++            let pagesRoot = path.resolve(process.cwd(), options.twigPages.baseSrc);
++            let pageListFiles = glob.sync(options.twigPages.src);
++            pageListFiles.forEach(function (file) {
++                if (path.parse(file).name !== 'index') {
+                     return;
+                 }
+-                //Adding entry to the list.
+-                pageList.push(path.basename(file,'.twig'));
++                let absFile = path.resolve(file);
++                let rel = path.relative(pagesRoot, absFile).replace(/\\/g, '/');
++                if (path.basename(rel) !== 'index.twig') {
++                    return;
++                }
++                let dir = path.dirname(rel);
++                if (dir === '.') {
++                    pageList.push({ label: '(raíz)', href: '/' });
++                    return;
++                }
++                // index/index.twig is the site root after twigPages:index copy
++                let href = dir === 'index' ? '/' : '/' + dir + '/';
++                let label = dir === 'index' ? 'inicio' : dir;
++                pageList.push({ label: label, href: href });
+             });
+             let componentList = [];
+ 
+@@ -166,20 +178,21 @@
+                     process.stderr.write(err.message + '\n');
+                     this.emit('end');
+                 })
+-                //Save files.
+-                .pipe(plugins.inject(sources()))
++                //Save files (same ignorePath as twigPages:pages so BrowserSync root matches hrefs).
++                .pipe(plugins.inject(sources(), { ignorePath: '/' + options.baseDestination + '/' }))
++                .pipe(plugins.inject(gulp.src([path.join(options.baseDestination, 'assets/js/vendors/*.js')], { read: false }), { starttag: '<!-- inject:vendors:{{ext}} -->', ignorePath: '/' + options.baseDestination + '/' }))
+                 .pipe(plugins.rename('index.html'))
+                 .pipe(gulp.dest(options.twigPages.destination));
+             }
+         
+     });
+     gulp.task('twigPages:index', function () {
+-        return gulp.src([path.join(options.twigPages.destination , '/index/index.html')])
++        return gulp.src([path.join(options.twigPages.destination, 'index/index.html')])
+         .pipe(plugins.copy(options.twigPages.destination, {prefix:2}))
+ 
+     });
+     gulp.task('twigPages:index:clean', function () {
+-        return gulp.src([path.join(options.twigPages.destination , '/index/index.html')])
++        return gulp.src([path.join(options.twigPages.destination, 'index/index.html')])
+         .pipe(plugins.clean())
+ 
+     });

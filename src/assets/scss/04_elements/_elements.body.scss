@@ -1,0 +1,7 @@
+body {
+  color: $black;
+  font-family: 'lynstone', Arial, sans-serif;
+  @include typi(normal);
+  font-variant-numeric: tabular-nums;
+  font-variant-ligatures: none;
+}

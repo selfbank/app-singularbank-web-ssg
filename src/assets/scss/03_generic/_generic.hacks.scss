@@ -1,0 +1,6 @@
+//Fix SVG in <img> tags not scaling
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  img[src$=".svg"] {
+    width: 100%;
+  }
+}

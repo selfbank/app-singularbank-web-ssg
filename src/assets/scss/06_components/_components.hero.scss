@@ -1,0 +1,84 @@
+.c-hero {
+  background: $black;
+  margin-bottom: spacing(2);
+  @include media-breakpoint-up(md) {
+    margin-bottom: spacing(4);
+  }
+
+  &.c-hero--quienes-somos {
+    background: $black url('../images/bk.quienes-somos.jpg') center center no-repeat;
+    background-size: cover;
+  }
+
+  &.c-hero--porque-singular-bank {
+    background: $gray-dark url('../images/bk.singular-bank.jpg') center center no-repeat;
+    background-size: cover;
+  }
+  &.c-hero--su-banquero {
+    background: $gray-dark url('../images/bk.banquero.jpg') center center no-repeat;
+    background-size: cover;
+    margin-bottom: 0;
+  }
+
+  &.c-hero--landing {
+    background: $gray-dark url('../images/cuentas-y-tarjetas/cuentas-y-tarjetas-header.png') center center no-repeat;
+    background-size: cover;
+    margin-bottom: 0;
+  }
+
+  &.c-hero--details-top {
+    background: $gray-dark url('../images/cuentas-y-tarjetas/singular-top-header.png') center center no-repeat;
+    background-size: cover;
+    margin-bottom: 0;
+  }
+ &.c-hero--details-plus {
+    background: $gray-dark url('../images/cuentas-y-tarjetas/singular-plus-header.png') center center no-repeat;
+    background-size: cover;
+    margin-bottom: 0;
+  }
+ &.c-hero--details-zero {
+    background: $gray-dark url('../images/cuentas-y-tarjetas/singular-zero-header.png') center center no-repeat;
+    background-size: cover;
+    margin-bottom: 0;
+  }
+
+  &.c-hero--contacto {
+    background: $gray-dark url('../images/bk.contacto.jpg') center center no-repeat;
+    background-size: cover;
+  }
+
+  &.c-hero--soluciones {
+    background: $gray-dark url('../images/bk.soluciones-financieras.jpg') center center no-repeat;
+    background-size: cover;
+  }
+
+  &.c-hero--oficinas-y-contacto {
+    background: $gray-dark url('../images/bk.oficinas.jpg') center center no-repeat;
+    background-size: cover;
+  }
+
+  &.c-hero--trabaja-con-nosotros {
+    background: $gray-dark url('../images/bk.trabaja-con-nosotros.jpg') center center no-repeat;
+    background-size: cover;
+  }
+
+  &.c-hero--noticias {
+    background: $gray-dark url('../images/bk-noticias.jpg') center center no-repeat;
+    background-size: cover;
+  }
+}
+
+.c-hero__container {
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+	align-items: flex-start;
+  color: white;
+
+  @include media-breakpoint-up(xl) {
+    height: 720px;
+  }
+
+  * {width: 100%;}
+}

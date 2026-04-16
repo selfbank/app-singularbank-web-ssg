@@ -1,0 +1,6 @@
+module,phase,name,code,sequence,workflow-file,command,required,agent-name,agent-command,agent-display-name,agent-title,options,description,output-location,outputs
+Core,bmad-help,BMad Help,BH,,,anytime,false,,,,,false,,,
+Core,bmad-init,BMad Init,BI,,,anytime,false,,,,,false,,,
+Core,bmad-change-request,Change request,CR,"Step 1: new change request from email or unstructured source; scaffold request folder and manifest.",,anytime,false,,,,,false,{output_folder}/requests,request folder,
+Core,bmad-change-discovery,Change Discovery,CD,Use as step 2 after bmad-change-request: fill discovery.md and map repo targets without patches.,,anytime,false,,,,,false,{output_folder}/requests,discovery.md,
+Core,bmad-change-proposal,Change Proposal,CP,Use as step 3 after discovery: write proposal/ drafts and update lessons learned on close.,,anytime,false,,,,,false,{output_folder}/requests,proposal artifacts,

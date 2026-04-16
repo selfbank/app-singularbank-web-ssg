@@ -1,0 +1,1193 @@
+
+{% extends "_layouts/page.twig" %}
+{% block page %}
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('zero-tile').addEventListener('click', () => {
+      document.getElementById('plus-plan').setAttribute('style', 'display: none !important')
+      document.getElementById('top-plan').setAttribute('style', 'display: none !important')
+      document.getElementById('zero-plan').setAttribute('style', 'display: flex !important')
+
+      document.getElementById('zero-tile').setAttribute('class', 'plan-tile col selected');
+      document.getElementById('plus-tile').setAttribute('class', 'plan-tile col');
+      document.getElementById('top-tile').setAttribute('class', 'plan-tile col');
+    });
+
+    document.getElementById('plus-tile').addEventListener('click', () => {
+      document.getElementById('zero-plan').setAttribute('style', 'display: none !important')
+      document.getElementById('top-plan').setAttribute('style', 'display: none !important')
+      document.getElementById('plus-plan').setAttribute('style', 'display: flex !important')
+      
+      document.getElementById('zero-tile').setAttribute('class', 'plan-tile col');
+      document.getElementById('plus-tile').setAttribute('class', 'plan-tile col selected');
+      document.getElementById('top-tile').setAttribute('class', 'plan-tile col');
+    });
+
+    document.getElementById('top-tile').addEventListener('click', () => {
+      document.getElementById('zero-plan').setAttribute('style', 'display: none !important')
+      document.getElementById('plus-plan').setAttribute('style', 'display: none !important')
+      document.getElementById('top-plan').setAttribute('style', 'display: flex !important')
+
+      document.getElementById('zero-tile').setAttribute('class', 'plan-tile col');
+      document.getElementById('plus-tile').setAttribute('class', 'plan-tile col');
+      document.getElementById('top-tile').setAttribute('class', 'plan-tile col selected');
+    });
+  });
+</script>
+
+<div class="landing">
+  <section class="c-hero c-hero--landing mt-8">
+   <div class="container">
+      <div class="row">
+	      <div class="col-12 col-sm-6 col-lg-4 mt-8">
+          <div class="info-box mr-sm-0 ml-sm-0 "> 
+            <span class="info-box-title">1/6</span> <span>Este número es el indicativo del riesgo del producto, siendo 1/6 indicativo de menor riesgo y 6/6 de mayor riesgo.</span> 
+          </div>
+          <div class="info-box info-box-no-upper-border mb-5 mb-lg-0 mr-sm-0 ml-sm-0"> 
+            <span>Singular Bank se encuentra adherido al Fondo Español de Garantía de Depósitos de Entidades de Crédito. La cantidad máxima garantizada por el Fondo es de 100.000 euros por depositante.</span> 
+          </div>
+        </div>	  
+        <div class="col-12 col-sm-6 col-lg-8">
+          <div class="c-hero__container">
+            <h1>Para clientes únicos.</h1>
+            <h3>Poder elegir lo extraordinario.</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class=" u-pt-4 u-pb-4">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-7">
+          <h2>¿Cómo quiere que sea su cuenta corriente?</h2>
+          <p class="red-text mt-5">NOS ADAPTAMOS A SUS NECESIDADES.</p>
+
+          <div class="description">
+            <p>Somos su banco, centrado en ayudarle a definir y alcanzar sus objetivos vitales, adaptándonos a su estilo de vida.</p>
+            <p>Escoja qué nivel de servicios y beneficios desea disfrutar en su día a día. </p>
+          </div>
+
+          <a href="#comparativa" class="c-button c-button--outline mt-4 c-button-w-xs-100">Le ayudamos a elegir</a>
+        </div>
+
+        <div class="col-md-5"> 
+          <img class="w-100 h-auto" src="../../assets/images/cuentas-y-tarjetas/metro-singular.png" alt="" />
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="c-background--lighter u-pt-4 u-pb-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-7 col-xl-8">
+          <h2>¿Qué nos diferencia?</h2>
+          <div class="description">
+            <p class="red-text mt-5">QUEREMOS SER SU ALIADO FINANCIERO</p>
+            <p>Le ayudamos a planificar sus ingresos, sus pagos, con las tarjetas de  debito y crédito que más se adecúan a su nivel de  vida.</p>
+            <p>Le ofrecemos servicios asociados que mejorarán su experiencia del día a día: protección y acompañamiento en el mundo digital, respaldo en sus compras, asistencia en sus viajes, acceso a más de 1.200 salas VIP en aeropuertos, servicios exclusivos... y mucho más.</p> 
+          </div>
+        </div>
+	    	<div class="col-12 col-lg-4 col-xl-3">
+         {% include "_includes/callbox.twig" %}
+        </div>		
+      </div>
+    </div>
+  </section>
+
+  <section id="comparativa" class="u-mt-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div  class="landing-table">
+            <table class="desktop">
+              <tr>
+                <td class="labels-col table-title" rowspan="4">
+                  <div class="d-flex flex-column justify-content-between">
+                    <h2>Elija cómo ser Singular</h2>
+                    <span class="red-text">SERVICIOS DESTACADOS</span>
+                  </div>
+                </td>
+                <td class="plan-col plan-name">Singular Zero</td>
+                <td class="plan-col plan-name">Singular Plus</td>
+                <td class="plan-col plan-name">Singular Top</td>
+              </tr>
+              <tr>
+                <td class="plan-col"><p>Para el cliente que quiere mayor control de sus finanzas y una ágil gestión de cobros y pagos, sin comisiones.</p></td>
+                <td class="plan-col"><p>Para el cliente que quiere además, buscar un mayor grado de seguridad en su actividad personal y digital, mejorar sus desplazamientos en su automóvil, y que es comprador habitual de objetos de valor.</p></td>
+                <td class="plan-col"><p>Para el cliente que además viaja con frecuencia, por lo que necesita mayor capacidad de pago, comodidad en los aeropuertos, seguridad ante imprevistos, mayores niveles de protección de sus dispositivos móviles y actividad digital.</p></td>
+              </tr>
+              <tr>
+                <td class="plan-col price"><span class="price-num">0,00</span> €/mes</td>
+                <td class="plan-col price"><span class="price-num">10,00</span> €/mes</td>
+                <td class="plan-col price"><span class="price-num">20,00</span> €/mes</td>
+              </tr>
+              <tr>
+                <td class="plan-col"><a href="/singular-zero/" class="c-button c-button--outline table-btn">SABER MÁS</a></td>
+                <td class="plan-col"><a href="/singular-plus/" class="c-button c-button--outline table-btn">SABER MÁS</a></td>
+                <td class="plan-col"><a href="/singular-top/" class="c-button c-button--outline table-btn">SABER MÁS</a></td>
+              </tr>
+              <tr>
+                <td class="gray-text" colspan="4">OPERATIVA DIARIA</td>
+              </tr>
+              <tr>
+                <td class="labels-col">Cuenta corriente sin comisiones</td>
+                <td class="plan-col"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido" /></td>
+                <td class="plan-col"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido" /></td>
+                <td class="plan-col"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido" /></td>
+              </tr>
+              <tr>
+                <td class="labels-col">Transferencias en zona euro, gratuitas</td>
+                <td class="plan-col"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido" /></td>
+                <td class="plan-col"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido" /></td>
+                <td class="plan-col"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido" /></td>
+              </tr>
+              <tr>
+                <td class="labels-col">Alertas SMS</td>
+                <td class="plan-col"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido" /></td>
+                <td class="plan-col"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido" /></td>
+                <td class="plan-col"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido" /></td>
+              </tr>
+              <!--<tr>
+                <td class="gray-text" colspan="4">CONTABILIDAD DOMÉSTICA</td>
+              </tr>
+              <tr>
+                <td class="labels-col">Cambio de domiciliaciones</td>
+                <td class="plan-col"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido" /></td>
+                <td class="plan-col"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido" /></td>
+                <td class="plan-col"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido" /></td>
+              </tr>
+              <tr>
+                <td class="labels-col">Personalización de movimientos</td>
+                <td class="plan-col"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido" /></td>
+                <td class="plan-col"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido" /></td>
+                <td class="plan-col"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido" /></td>
+              </tr>
+              <tr>
+                <td class="labels-col">Resumen de ingresos y gastos</td>
+                <td class="plan-col"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido" /></td>
+                <td class="plan-col"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido" /></td>
+                <td class="plan-col"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido" /></td>
+              </tr>-->
+              <!--<tr>
+                <td class="gray-text" colspan="4">TARJETAS</td>
+              </tr>-->
+              
+              <tr>
+                <td class="labels-col">Tarjeta de Débito</td>
+                <td class="plan-col"><img data-src="/assets/images/cuentas-y-tarjetas/classic-debito.jpg" class="mw-100 lazyloaded" alt="Débito Classic" src="/assets/images/cuentas-y-tarjetas/classic-debito.jpg"></td>
+                <td class="plan-col"><img data-src="/assets/images/cuentas-y-tarjetas/classic-debito.jpg" class="mw-100 lazyloaded" alt="Débito Classic" src="/assets/images/cuentas-y-tarjetas/classic-debito.jpg"></td>
+                <td class="plan-col"><img data-src="/assets/images/cuentas-y-tarjetas/classic-debito.jpg" class="mw-100 lazyloaded" alt="Débito Classic" src="/assets/images/cuentas-y-tarjetas/classic-debito.jpg"></td>
+              </tr>
+              <tr>
+                <td class="labels-col">Tarjeta de Crédito</td>
+                <td class="plan-col"><img data-src="/assets/images/cuentas-y-tarjetas/classic-credito.jpg" class="mw-100 lazyloaded" alt="Crédito Classic" src="/assets/images/cuentas-y-tarjetas/classic-credito.jpg">
+                    <div class=" mt-1">Visa Classic</div>
+                </td>
+                <td class="plan-col"><img data-src="/assets/images/cuentas-y-tarjetas/platinum-credito.jpg" class="mw-100 lazyloaded" alt="Crédito Platinum" src="/assets/images/cuentas-y-tarjetas/platinum-credito.jpg">
+                  <div class=" mt-1">Visa Platinum</div>
+                </td>
+                <td class="plan-col"><img data-src="/assets/images/cuentas-y-tarjetas/infinite-credito.jpg" class="mw-100 lazyloaded" alt="Crédito Infinite" src="/assets/images/cuentas-y-tarjetas/infinite-credito.jpg">
+                  <div class=" mt-1">Visa Infinite</div>
+                </td>
+              </tr>
+              <tr>
+                <td class="labels-col">Límite de crédito mínimo (personalizable)</td>
+                <td class="plan-col"><span class="">1.500 €</span></td>
+                <td class="plan-col"><span class="">3.000 €</span></td>
+                <td class="plan-col"><span class="">10.000 €</span></td>
+              </tr>
+              <tr>
+                <td class="labels-col">Extracción en cualquier cajero a débito</td>
+                <td class="plan-col"><span class="">1ª retirada gratuita al mes</span></td>
+                <td class="plan-col"><span class="">Ilimitadas gratuitas</span></td>
+                <td class="plan-col"><span class="">Ilimitadas gratuitas</span></td>
+              </tr>
+              <tr>
+                <td class="labels-col">Google/Samsung Pay</td>
+                <td class="plan-col"><span class=""><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido"/></span></td>
+                <td class="plan-col"><span class=""><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido"/></span></td>
+                <td class="plan-col"><span class=""><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido"/></span></td>
+              </tr>
+              <tr>
+                <td class="gray-text" colspan="4">COMODIDAD EN VIAJES Y DESPLAZAMIENTOS</td>
+              </tr>
+              <tr>
+                <td class="labels-col">Bip & Drive: Telepeaje y descuentos en gasolineras, parking, etc.</td>
+                <td class="plan-col"><img class="cross mw-100" src="../../assets/images/cross.svg" alt="No incluido"/></td>
+                <td class="plan-col"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido"/></td>
+                <td class="plan-col"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido"/></td>
+              </tr>
+              <tr>
+                <td class="labels-col">Asistencia médica, incidencias en viajes y vuelos, asistencia jurídica, garantías de anulación, etc.</td>
+                <td class="plan-col"><img class="cross mw-100" src="../../assets/images/cross.svg" alt="No incluido"/></td>
+                <td class="plan-col"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido"/></td>
+                <td class="plan-col"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido"/></td>
+              </tr>
+              <tr>
+                <td class="labels-col">Asistencia en carretera KM 0</td>
+                <td class="plan-col"><img class="cross mw-100" src="../../assets/images/cross.svg" alt="No incluido"/></td>
+                <td class="plan-col"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido"/></td>
+                <td class="plan-col"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido"/></td>
+              </tr>
+              <tr>
+                <td class="labels-col">Condiciones preferentes en Visa Luxury Hotels</td>
+                <td class="plan-col"><img class="cross mw-100" src="../../assets/images/cross.svg" alt="No incluido"/></td>
+                <td class="plan-col"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido"/></td>
+                <td class="plan-col"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido"/></td>
+              </tr>
+              <tr>
+                <td class="labels-col">Acceso a 1.200 salas VIP en aeropuertos (2 pases al año valorados en 150€)</td>
+                <td class="plan-col"><img class="cross mw-100" src="../../assets/images/cross.svg" alt="No incluido"/></td>
+                <td class="plan-col"><img class="cross mw-100" src="../../assets/images/cross.svg" alt="No incluido"/></td>
+                <td class="plan-col"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido"/></td>
+              </tr>
+              <tr>
+                <td class="labels-col">Descuento en accesos adicionales a las VIP</td>
+                <td class="plan-col"><img class="cross mw-100" src="../../assets/images/cross.svg" alt="No incluido"/></td>
+                <td class="plan-col"><img class="cross mw-100" src="../../assets/images/cross.svg" alt="No incluido"/></td>
+                <td class="plan-col"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido"/></td>
+              </tr>
+              <tr>
+                <td class="labels-col">Gestión de visados</td>
+                <td class="plan-col"><img class="cross mw-100" src="../../assets/images/cross.svg" alt="No incluido"/></td>
+                <td class="plan-col"><img class="cross mw-100" src="../../assets/images/cross.svg" alt="No incluido"/></td>
+                <td class="plan-col"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido"/></td>
+              </tr>
+              <tr>
+                <td class="gray-text" colspan="4">SEGURIDAD Y ASISTENCIA TECNOLÓGICA</td>
+              </tr>
+              <tr>
+                <td class="labels-col">Asistencia tecnológica e informática remotas, protección y rastreo de ordenadores</td>
+                <td class="plan-col"><img class="cross mw-100" src="../../assets/images/cross.svg" alt="No incluido" /></td>
+                <td class="plan-col"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido" /></td>
+                <td class="plan-col"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido" /></td>
+              </tr>
+              <tr>
+                <td class="labels-col">Robo/Rotura dispositivos móviles 500 €/año</td>
+                <td class="plan-col"><img class="cross mw-100" src="../../assets/images/cross.svg" alt="No incluido" /></td>
+                <td class="plan-col"><img class="cross mw-100" src="../../assets/images/cross.svg" alt="No incluido" /></td>
+                <td class="plan-col"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido" /></td>
+              </tr>             
+              <tr>
+                <td class="labels-col">Móvil de sustitución</td>
+                <td class="plan-col"><img class="cross mw-100" src="../../assets/images/cross.svg" alt="No incluido" /></td>
+                <td class="plan-col"><img class="cross mw-100" src="../../assets/images/cross.svg" alt="No incluido" /></td>
+                <td class="plan-col"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido" /></td>
+              </tr>
+              <tr>
+                <td class="labels-col">Antivirus 5 dispositivos</td>
+                <td class="plan-col"><img class="cross mw-100" src="../../assets/images/cross.svg" alt="No incluido" /></td>
+                <td class="plan-col"><img class="cross mw-100" src="../../assets/images/cross.svg" alt="No incluido" /></td>
+                <td class="plan-col"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido" /></td>
+              </tr>
+              <tr>
+                <td class="labels-col">Recuperación de datos</td>
+                <td class="plan-col"><img class="cross mw-100" src="../../assets/images/cross.svg" alt="No incluido" /></td>
+                <td class="plan-col"><img class="cross mw-100" src="../../assets/images/cross.svg" alt="No incluido" /></td>
+                <td class="plan-col"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido" /></td>
+              </tr>
+              <tr>
+                <td class="gray-text" colspan="4">SEGURIDAD Y ASISTENCIA A PERSONAS</td>
+              </tr>
+            <tr>
+              <td class="labels-col">Seguro de accidentes</td>
+              <td class="plan-col"><img class="cross mw-100" src="../../assets/images/cross.svg" alt="No incluido"/></td>
+              <td class="plan-col"><span class="">500.000 €</span></td>
+              <td class="plan-col"><span class="">1.000.000€</span></td>
+            </tr>
+
+            <tr>
+              <td class="labels-col">Servicio de Concierge: rservas, envío flores/regalos, alquiles de coches etc</td>
+              <td class="plan-col"><img class="cross mw-100" src="../../assets/images/cross.svg" alt="No incluido"/></td>
+              <td class="plan-col"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido"/></td>
+              <td class="plan-col"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido"/></td>
+            </tr>
+
+
+
+              <tr>
+                <td class="gray-text" colspan="4">COMPRAS SEGURAS</td>
+              </tr>
+              <tr>
+                <td class="labels-col">Apagado/Encendido de tarjetas</td>
+                <td class="plan-col"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido" /></td>
+                <td class="plan-col"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido" /></td>
+                <td class="plan-col"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido" /></td>
+              </tr>
+              <tr>
+                <td class="labels-col">Compra protegida por robo o daño 600 €</td>
+                <td class="plan-col"><img class="cross mw-100" src="../../assets/images/cross.svg" alt="No incluido" /></td>
+                <td class="plan-col"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido" /></td>
+                <td class="plan-col"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido" /></td>
+              </tr>
+              {# <tr>
+                <td class="labels-col">Compra online protegida, no entregada o defectuosa 600 €</td>
+                <td class="plan-col"><img class="cross mw-100" src="../../assets/images/cross.svg" alt="No incluido" /></td>
+                <td class="plan-col"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido" /></td>
+                <td class="plan-col"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido" /></td>
+              </tr> #}
+
+              <tr>
+                <td class="labels-col"></td>
+                <td class="plan-col bottom-plan-name">Singular Zero</td>
+                <td class="plan-col bottom-plan-name">Singular Plus</td>
+                <td class="plan-col bottom-plan-name">Singular Top</td>
+              </tr>
+              <tr>
+                <td class="labels-col"></td>
+                <td class="plan-col"><a href="/singular-zero/" class="c-button w-100">Saber más</a></td>
+                <td class="plan-col"><a href="/singular-plus/" class="c-button w-100">Saber más</a></td>
+                <td class="plan-col"><a href="/singular-top/"  class="c-button w-100">Saber más</a></td>
+              </tr>
+            </table>
+            <div class="mobile">
+              <h2>Elija como ser Singular</h2>
+              <div class="plan-selector row">
+                <span class="plan-tile col selected" id="zero-tile">Singular Zero</span>
+                <span class="plan-tile col" id="plus-tile">Singular Plus</span>
+                <span class="plan-tile col" id="top-tile">Singular Top</span>
+              </div>
+              <div class="plan-content d-flex flex-column justify-content-center" id="zero-plan">
+                <div class="description">
+                  <p>Para el cliente que quiere mayor control de sus finanzas y una ágil gestión de cobros y pagos, sin comisiones.</p>
+                </div>
+                <div class="price d-flex justify-content-center">
+                  <span class="number">0,00</span>
+                  <span class="label">€/mes</span>
+                </div>
+                <a href="/singular-zero/" class="c-button c-button--outline plan-btn">SABER MÁS</a>
+                <table>
+                  <tr>
+                    <td class="gray-text" colspan="2">OPERATIVA DIARIA</td>
+                  </tr>
+                  <tr>
+                    <td class="label-cell">Cuenta corriente sin comisiones</td>
+                    <td class="value-cell"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido" /></td>
+                  </tr>
+                  <tr>
+                    <td class="label-cell">Transferencias en zona euro, gratuitas</td>
+                    <td class="value-cell"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido" /></td>
+                  </tr>
+                  <tr>
+                    <td class="label-cell">Alertas SMS</td>
+                    <td class="value-cell"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido" /></td>
+                  </tr>
+                  <!--<tr>
+                    <td class="gray-text" colspan="2">CONTABILIDAD DOMÉSTICA</td>
+                  </tr>
+                  <tr>
+                    <td class="label-cell">Cambio de domiciliaciones</td>
+                    <td class="value-cell"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido" /></td>
+                  </tr>
+                  <tr>
+                    <td class="label-cell">Personalización de movimientos</td>
+                    <td class="value-cell"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido" /></td>
+                  </tr>
+                  <tr>
+                    <td class="label-cell">Resumen de ingresos y gastos</td>
+                    <td class="value-cell"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido" /></td>
+                  </tr>-->
+                  <tr>
+                    <td class="gray-text" colspan="2">TARJETAS</td>
+                  </tr>
+                  <tr>
+                    <td class="label-cell">Tarjeta de Débito</td>
+                    <td class="value-cell"><img data-src="/assets/images/cuentas-y-tarjetas/classic-debito.jpg" class="mw-100 lazyloaded" alt="Crédito Classic" src="/assets/images/cuentas-y-tarjetas/classic-debito.jpg"></td>
+                  </tr>
+                  <tr>
+                    <td class="label-cell">Tarjeta de Crédito</td>
+                    <td class="value-cell"><img data-src="/assets/images/cuentas-y-tarjetas/classic-credito.jpg" class="mw-100 lazyloaded" alt="Débito Classic" src="/assets/images/cuentas-y-tarjetas/classic-credito.jpg"></td>
+                  </tr>
+                  <tr>
+                    <td class="label-cell">Límite de crédito mínimo (personalizable)</td>
+                    <td class="value-cell"><span class="">1.500 €</span></td>
+                  </tr>
+                  <tr>
+                    <td class="label-cell">Extracción en cualquier cajero a débito</td>
+                    <td class="value-cell"><span class="">1ª retirada gratuita al mes</span></td>                		
+                  </tr>
+                  <tr>
+                    <td class="label-cell">Google / Samsung Pay</td>
+                    <td class="value-cell"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido"/></td>
+                  </tr>
+                  <tr>
+                    <td class="gray-text" colspan="2">COMODIDAD EN VIAJES Y DESPLAZAMIENTOS</td>
+                  </tr>
+                  <tr>
+                    <td class="label-cell">Bip & Drive: Telepeaje y descuentos en gasolineras, parking, etc.</td>
+                    <td class="value-cell"><img class="cross mw-100" src="../../assets/images/cross.svg" alt="No incluido"/></td>
+                  </tr>
+                
+                  <tr>
+                    <td class="label-cell">Asistencia médica, incidencias en viajes y vuelos, asistencia jurídica, garantías de anulación, etc.</td>
+                    <td class="value-cell"><img class="cross mw-100" src="../../assets/images/cross.svg" alt="No incluido"/></td>
+                  </tr>
+                  <tr>
+                    <td class="label-cell">Asistencia en carretera KM 0</td>
+                    <td class="value-cell"><img class="cross mw-100" src="../../assets/images/cross.svg" alt="No incluido"/></td>
+                  </tr>
+
+                  {# <tr>
+                    <td class="label-cell">Atención personal en reservas: viajes, restaurantes, taxis...</td>
+                    <td class="value-cell"><img class="cross mw-100" src="../../assets/images/cross.svg" alt="No incluido"/></td>
+                  </tr> #}
+                  <tr>
+                    <td class="label-cell">Condiciones preferentes en Visa Luxury Hotels</td>
+                    <td class="value-cell"><img class="cross mw-100" src="../../assets/images/cross.svg" alt="No incluido"/></td>
+                  </tr>
+                
+                  <tr>
+                    <td class="label-cell">Acceso a 1.200 salas VIP en aeropuertos (2 pases al año valorados en 150€)</td>
+                    <td class="value-cell"><img class="cross mw-100" src="../../assets/images/cross.svg" alt="No incluido"/></td>
+                  </tr>
+                  <tr></tr>
+                  <tr>
+                    <td class="label-cell">Descuento en accesos adicionales a las VIP</td>
+                    <td class="value-cell"><img class="cross mw-100" src="../../assets/images/cross.svg" alt="No incluido"/></td>
+                  </tr>
+                  <tr>
+                    <td class="label-cell">Gestión de visados</td>
+                    <td class="value-cell"><img class="cross mw-100" src="../../assets/images/cross.svg" alt="No incluido"/></td>
+                  </tr>
+
+
+                  <tr>
+                    <td class="gray-text" colspan="2">SEGURIDAD Y ASISTENCIA TECNOLÓGICA</td>
+                  </tr>
+                  <tr>
+                    <td class="label-cell">Asistencia tecnológica e informática remotas, protección y rastreo de ordenadores</td>
+                    <td class="value-cell"><img class="cross mw-100" src="../../assets/images/cross.svg" alt="No incluido" /></td>
+                  </tr>
+                  <tr>
+                    <td class="label-cell">Robo/Rotura dispositivos móviles</td>
+                    <td class="value-cell"><img class="cross mw-100" src="../../assets/images/cross.svg" alt="No incluido" /></td>
+                  </tr>
+                  <tr>
+                    <td class="label-cell">Móvil de sustitución</td>
+                    <td class="value-cell"><img class="cross mw-100" src="../../assets/images/cross.svg" alt="No incluido" /></td>
+                  </tr>
+                  <tr>
+                    <td class="label-cell">Antivirus 5 dispositivos</td>
+                    <td class="value-cell"><img class="cross mw-100" src="../../assets/images/cross.svg" alt="No incluido" /></td>
+                  </tr>
+                  <tr>
+                    <td class="label-cell">Recuperación de datos</td>
+                    <td class="value-cell"><img class="cross mw-100" src="../../assets/images/cross.svg" alt="No incluido" /></td>
+                  </tr>
+                  <tr>
+                    <td class="gray-text" colspan="2">SEGURIDAD Y ASISTENCIA PERSONAS</td>
+                  </tr>
+                  <tr>
+                    <td class="label-cell">Seguro de accidentes</td>
+                    <td class="value-cell"><img class="cross mw-100" src="../../assets/images/cross.svg" alt="No incluido"/></td>
+                  </tr> 
+                  <tr>
+                    <td class="label-cell">Servicio de Concierge: reservas, envío flores/regalos, alquiler de coches etc.</td>
+                    <td class="value-cell"><img class="cross mw-100" src="../../assets/images/cross.svg" alt="No incluido"/></td>
+                  </tr>
+
+
+
+                  <tr>
+                    <td class="gray-text" colspan="2">COMPRAS SEGURAS</td>
+                  </tr>
+                  <tr>
+                    <td class="label-cell">Apagado/Encendido de tarjetas</td>
+                    <td class="value-cell"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido" /></td>
+                  </tr>
+                  <tr>
+                    <td class="label-cell">Compra protegida por robo o daño 600€</td>
+                    <td class="value-cell"><img class="cross mw-100" src="../../assets/images/cross.svg" alt="No incluido" /></td>
+                  </tr>
+                  {# <tr>
+                    <td class="label-cell">Compra online protegida, no entregada o defectuosa</td>
+                    <td class="value-cell"><img class="cross mw-100" src="../../assets/images/cross.svg" alt="No incluido" /></td>
+                  </tr> #}
+                 
+                </table>
+                <div class="bottom-plan-name">Singular Zero</div>
+                <a href="/singular-zero/" class="c-button c-button--outline bottom-plan-btn">SABER MÁS</a>
+              </div>
+
+              <div class="plan-content d-flex flex-column justify-content-center" id="plus-plan" style="display: none">
+                <div class="description">
+                  <p>Para el cliente que quiere además, buscar un mayor grado de seguridad en su actividad personal y digital, mejorar sus desplazamientos en su automóvil, y que es comprador habitual de objetos de valor.</p>
+                </div>
+                <div class="price d-flex justify-content-center">
+                  <span class="number">10,00</span>
+                  <span class="label">€/mes</span>
+                </div>
+                <a href="/singular-plus/" class="c-button c-button--outline plan-btn">SABER MÁS</a>
+                <table>
+                  <tr>
+                    <td class="red-text" colspan="2">SERVICIOS</td>
+                  </tr>
+                  <tr>
+                    <td class="gray-text" colspan="2">OPERATIVA DIARIA</td>
+                  </tr>
+                  <tr>
+                    <td class="label-cell">Cuenta corriente sin comisiones</td>
+                    <td class="value-cell"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido" /></td>
+                  </tr>
+                  <tr>
+                    <td class="label-cell">Transferencias en zona euro, gratuitas</td>
+                    <td class="value-cell"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido" /></td>
+                  </tr>
+                  <tr>
+                    <td class="label-cell">Alertas SMS</td>
+                    <td class="value-cell"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido" /></td>
+                  </tr>
+                  <!--<tr>
+                        <td class="gray-text" colspan="2">CONTABILIDAD DOMÉSTICA</td>
+                      </tr>
+                      <tr>
+                        <td class="label-cell">Cambio de domiciliaciones</td>
+                        <td class="value-cell"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido" /></td>
+
+                      </tr>
+                      <tr>
+                        <td class="label-cell">Personalización de movimientos</td>
+                        <td class="value-cell"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido" /></td>
+                      </tr>
+                      <tr>
+                        <td class="label-cell">Resumen de ingresos y gastos</td>
+                        <td class="value-cell"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido" /></td>
+                      </tr>-->
+                  <tr>
+                    <td class="gray-text" colspan="2">TARJETAS</td>
+                  </tr>
+                  <tr>
+                    <td class="label-cell">Tarjeta de Débito</td>
+                    <td class="value-cell"><img data-src="/assets/images/cuentas-y-tarjetas/classic-debito.jpg" class="mw-100 lazyloaded" alt="Crédito Classic" src="/assets/images/cuentas-y-tarjetas/classic-debito.jpg"></td>
+                  </tr>
+                  <tr>
+                    <td class="label-cell">Tarjeta de Crédito</td>
+                    <td class="value-cell"><img data-src="/assets/images/cuentas-y-tarjetas/platinum-credito.jpg" class="mw-100 lazyloaded" alt="Crédito Platinum" src="/assets/images/cuentas-y-tarjetas/platinum-credito.jpg"></td>
+                  </tr>
+                  <tr>
+                    <td class="label-cell">Límite de crédito mínimo (personalizable)</td>
+                    <td class="value-cell"><span class="">3.000 €</span></td>
+                  </tr>
+                  <tr>
+                    <td class="label-cell">Extracción en cualquier cajero a débito</td>
+                    <td class="value-cell"><span class="">Ilimitadas gratuitas</span></td>
+                  </tr>
+                  <tr>
+                    <td class="label-cell">Google / Samsung Pay</td>
+                    <td class="value-cell"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido"/></td>
+                  </tr>
+                  <tr>
+                    <td class="gray-text" colspan="2">COMODIDAD EN VIAJES Y DESPLAZAMIENTOS</td>
+                  </tr>
+                  <tr>
+                    <td class="label-cell">Bip & Drive: Telepeaje y descuentos en gasolineras, parking, etc.</td>
+                    <td class="value-cell"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido"/></td>
+                  </tr>
+                 
+                  <tr>
+                    <td class="label-cell">Asistencia médica, incidencias en viajes y vuelos, asistencia jurídica, garantías de anulación, etc.</td>
+                    <td class="value-cell"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido"/></td>
+                  </tr>
+                  <tr>
+                    <td class="label-cell">Asistencia en carretera KM 0</td>
+                    <td class="value-cell"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido"/></td>
+                  </tr>
+
+                  <tr>
+                    <td class="label-cell">Condiciones preferentes en Visa Luxury Hotels</td>
+                    <td class="value-cell"><img class="cross mw-100" src="../../assets/images/cross.svg" alt="No incluido"/></td>
+                  </tr>
+               
+                  <tr>
+                    <td class="label-cell">Acceso a 1.200 salas VIP en aeropuertos (2 pases al año valorados en 150€)</td>
+                    <td class="value-cell"><img class="cross mw-100" src="../../assets/images/cross.svg" alt="No incluido"/></td>
+                  </tr>
+                  <tr>
+                    <td class="label-cell">Descuento en accesos adicionales a las VIP</td>
+                    <td class="value-cell"><img class="cross mw-100" src="../../assets/images/cross.svg" alt="No incluido"/></td>
+                  </tr>
+                  <tr>
+                    <td class="label-cell">Gestón de visados</td>
+                    <td class="value-cell"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido"/></td>
+                  </tr>
+
+
+                  <tr>
+                    <td class="gray-text" colspan="2">SEGURIDAD Y ASISTENCIA TECNOLÓGICA</td>
+                  </tr>
+                  <tr>
+                    <td class="label-cell">Asistencia tecnológica e informática remotas, protección y rastreo de ordenadores</td>
+                    <td class="value-cell"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido" /></td>
+                  </tr> 
+                  <tr>
+                    <td class="label-cell">Robo/Rotura dispositivos móviles</td>
+                    <td class="value-cell"><img class="cross mw-100" src="../../assets/images/cross.svg" alt="No incluido" /></td>
+                  </tr>			              
+                  <tr>
+                    <td class="label-cell">Móvil de sustitución</td>
+                    <td class="value-cell"><img class="cross mw-100" src="../../assets/images/cross.svg" alt="No incluido" /></td>
+                  </tr>
+                  <tr>
+                    <td class="label-cell">Antivirus 5 dispositivos</td>
+                    <td class="value-cell"><img class="cross mw-100" src="../../assets/images/cross.svg" alt="No incluido" /></td>
+                  </tr>
+                  <tr>
+                    <td class="label-cell">Recuperación de datos</td>
+                    <td class="value-cell"><img class="cross mw-100" src="../../assets/images/cross.svg" alt="No incluido" /></td>
+                  </tr>   
+
+                  <tr>
+                    <td class="gray-text" colspan="2">SEGURIDAD Y ASISTENCIA A  PERSONAS</td>
+                  </tr>
+
+                  <tr>
+                    <td class="label-cell">Seguro de accidentes</td>
+                    <td class="value-cell">
+                      <span class="">500.000 €</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="label-cell">Servicio de Concierge: rEservas, envío flores/regalos, alquiles de coches etc</td>
+                    <td class="value-cell"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido"/></td>
+                  </tr>
+
+                  <tr>
+                    <td class="gray-text" colspan="2">COMPRAS SEGURAS</td>
+                  </tr>
+                  <tr>
+                    <td class="label-cell">Apagado/Encendido de tarjetas</td>
+                    <td class="value-cell"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido" /></td>
+                  </tr>
+                  <tr>
+                    <td class="label-cell">Compra protegida por robo o daño</td>
+                    <td class="value-cell"><span class="">600 €</span></td>
+                  </tr>
+                  {# <tr>
+                    <td class="label-cell">Compra online protegida, no entregada o defectuosa</td>
+                    <td class="value-cell"><span class="">600 €</span></td>
+                  </tr> #}
+
+
+                </table>
+                <div class="bottom-plan-name">Singular Plus</div>
+                <a href="/singular-plus/" class="c-button c-button--outline bottom-plan-btn">SABER MÁS</a>
+              </div>
+
+              <div class="plan-content d-flex flex-column justify-content-center" id="top-plan" style="display: none">
+                <div class="description">
+                  <p>Para el cliente que además viaja con frecuencia, por lo que necesita mayor capacidad de pago, comodidad en los aeropuertos, seguridad ante imprevistos, mayores niveles de protección de sus dispositivos móviles y actividad digital.</p>
+                </div>
+
+                <div class="price d-flex justify-content-center">
+                  <span class="number">20,00</span>
+                  <span class="label">€/mes</span>
+                </div>
+
+                <a href="/singular-top/" class="c-button c-button--outline plan-btn">SABER MÁS</a>
+                <table>
+                  <tr>
+                    <td class="red-text" colspan="2">SERVICIOS</td>
+                  </tr>
+                  <tr>
+                    <td class="gray-text" colspan="2">OPERATIVA DIARIA</td>
+                  </tr>
+                  <tr>
+                    <td class="label-cell">Cuenta corriente sin comisiones</td>
+                    <td class="value-cell"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido" /></td>
+                  </tr>
+                  <tr>
+                    <td class="label-cell">Transferencias en zona euro, gratuitas</td>
+                    <td class="value-cell"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido" /></td>
+                  </tr>
+                  <tr>
+                    <td class="label-cell">Alertas SMS</td>
+                    <td class="value-cell"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido" /></td>
+                  </tr>
+                  <!--<tr>
+                      <td class="gray-text" colspan="2">CONTABILIDAD DOMÉSTICA</td>
+                    </tr>
+                    <tr>
+                      <td class="label-cell">Cambio de domiciliaciones</td>
+                      <td class="value-cell"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido" /></td>
+                    </tr>
+                    <tr>
+                      <td class="label-cell">Personalización de movimientos</td>
+                      <td class="value-cell"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido" /></td>
+                    </tr>
+                    <tr>
+                      <td class="label-cell">Resumen de ingresos y gastos</td>
+                      <td class="value-cell"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido" /></td>
+                    </tr>-->
+                    <tr>
+                      <td class="gray-text" colspan="2">TARJETAS</td>
+                    </tr>
+                    <tr>
+                      <td class="label-cell">Tarjeta de Débito</td>
+                      <td class="value-cell"><img data-src="/assets/images/cuentas-y-tarjetas/classic-debito.jpg" class="mw-100 lazyloaded" alt="Crédito Classic" src="/assets/images/cuentas-y-tarjetas/classic-debito.jpg"></td>
+                    </tr>
+                    <tr>
+                      <td class="label-cell">Tarjeta de Crédito</td>
+                      <td class="value-cell"><img data-src="/assets/images/cuentas-y-tarjetas/infinite-credito.jpg" class="mw-100 lazyloaded" alt="Crédito Infinite" src="/assets/images/cuentas-y-tarjetas/infinite-credito.jpg"></td>
+                    </tr>
+                    <tr>
+                      <td class="label-cell">Límite de crédito mínimo (personalizable)</td>
+                      <td class="value-cell"><span class="">10.000 €</span></td>
+                    </tr>
+                    <tr>
+                      <td class="label-cell">Extracción en cualquier cajero a débito</td>
+                      <td class="value-cell"><span class="">Ilimitadas gratuitas</span></td>
+                    </tr>
+                    <tr>
+                      <td class="label-cell">Google / Samsung Pay</td>
+                      <td class="value-cell"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido"/></td>
+                    </tr>
+                    <tr>
+                      <td class="gray-text" colspan="2">COMODIDAD EN VIAJES Y DESPLAZAMIENTOS</td>
+                    </tr>
+                    <tr>
+                      <td class="label-cell">Bip & Drive: Telepeaje y descuentos en gasolineras, parking, etc.</td>
+                      <td class="value-cell"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido"/></td>
+                    </tr>
+                    
+                    <tr>
+                      <td class="label-cell">Asistencia médica, incidencias en viajes y vuelos, asistencia jurídica, garantías de anulación, etc.</td>
+                      <td class="value-cell"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido"/></td>
+                    </tr>
+                    <tr>
+                      <td class="label-cell">Asistencia en carretera KM 0</td>
+                      <td class="value-cell"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido"/></td>
+                    </tr>
+
+                    <tr>
+                      <td class="label-cell">Condiciones preferentes en Visa Luxury Hotels</td>
+                      <td class="value-cell"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido"/></td>
+                    </tr>
+                    
+                    <tr>
+                      <td class="label-cell">Acceso a 1.200 salas VIP en aeropuertos (2 pases al año valorados en 150€)</td>
+                      <td class="value-cell"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido"/></td>
+                    </tr>
+                    <tr>
+                      <td class="label-cell">Descuento en accesos adicionales a las VIP</td>
+                      <td class="value-cell"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido"/></td>
+                    </tr>
+
+                    <tr>
+                      <td class="label-cell">Gestión de visados</td>
+                      <td class="value-cell"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido"/></td>
+                    </tr>
+
+                    <tr>
+                      <td class="gray-text" colspan="2">SEGURIDAD Y ASISTENCIA TECNOLÓGICA</td>
+                    </tr>
+                    <tr>
+                      <td class="label-cell">Asistencia tecnológica e informática remotas, protección y rastreo de ordenadores</td>
+                      <td class="value-cell"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido" /></td>
+                    </tr>  
+                    <tr>
+                      <td class="label-cell">Robo/Rotura dispositivos móviles 500 €/año</td>
+                      <td class="value-cell"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido" /></td>
+                    </tr>
+                    <tr>
+                      <td class="label-cell">Móvil de sustitución</td>
+                      <td class="value-cell"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido" /></td>
+                    </tr>
+                    <tr>
+                      <td class="label-cell">Antivirus 5 dispositivos</td>
+                      <td class="value-cell"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido" /></td>
+                    </tr>
+                    <tr>
+                      <td class="label-cell">Recuperación de datos</td>
+                      <td class="value-cell"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido" /></td>
+                    </tr>
+                    <tr>
+                      <td class="gray-text" colspan="2">SEGURIDAD Y ASISTENCIA A  PERSONAS</td>
+                    </tr>
+
+                    <tr>
+                      <td class="label-cell">Seguro de accidentes</td>
+                      <td class="value-cell">
+                        <span class="">1.000.000€</span>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td class="label-cell">Servicio de Concierge: reservas, envío flores/regalos, alquiles de coches etc</td>
+                      <td class="value-cell"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido"/></td>
+                    </tr>
+
+                    <tr>
+                      <td class="gray-text" colspan="2">COMPRAS SEGURAS</td>
+                    </tr>			  
+                    <tr>
+                      <td class="label-cell">Apagado/Encendido de tarjetas</td>
+                      <td class="value-cell"><img class="icon-check mw-100" src="../../assets/images/check.svg" alt="Incluido" /></td>
+                    </tr>
+                    <tr>
+                      <td class="label-cell">Compra protegida por robo o daño</td>
+                      <td class="value-cell"><span class="">600 €</span></td>
+                    </tr>
+                    {# <tr>
+                      <td class="label-cell">Compra online protegida, no entregada o defectuosa</td>
+                      <td class="value-cell"><span class="">600 €</span></td>
+                    </tr> #}
+                   
+
+
+
+                </table>
+                <div class="bottom-plan-name">Singular Top</div>
+                <a href="/singular-top/" class="c-button c-button--outline bottom-plan-btn">SABER MÁS</a>
+              </div>     
+            </div>
+
+
+
+            <div class="c-texto-legal">
+              <p>0% TIN anual, 0% TAE. Ejemplo representativo de modalidad de pago total a fin de mes, disposición 1.500 €: T.I.N.: 0%; T.A.E.: 0%; Importe total del crédito: 1.500 €. Importe total adeudado: 1.500 €. Coste total del crédito: 0 €. Comisión de emisión de la tarjeta: 0 €. Contratarla es gratis y renovarla también cumpliendo condiciones</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="c-contacto-legal">
+          <p>
+            <span>
+              Tel. +34 912909083</span>
+            <span class="divider">.</span>
+            <span>singularbank.es</span>
+          </p>
+        </div>
+      </div>
+
+      
+    </div>
+
+  </section>
+  
+  <!-- carruseles
+
+  <section class="c-background">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-3 plan-card-left d-flex flex-column">
+          <div class="plan-picture aguila"></div>
+          <div class="sub-picture d-flex flex-column">
+            <span class="red-text plan-title mt-5">Singular Zero</span>
+            <span class="plan-price gray-text mt-4"><span class="bold">0,00</span> €/mes</span>
+            <a href="" class="mt-4 c-button wide-btn">Contratar</a>
+          </div>
+        </div>
+        <div class="remove-col-padding col-lg-9">
+          <div class="main d-flex">
+            <div id="carousel-singular-zero" class="c-product--carousel carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators carousel-indicators--bottom">
+                <li data-target="#carousel-singular-zero" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-singular-zero" data-slide-to="1"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="content plan-card-right">
+                    <div class="row"><div class="col-lg-12"><h2 class="main-title red-text">Singular Zero</h2></div></div>
+                    <div class="row"><div class="col-lg-12"><h3 class="main-subtitle red-text">Un servicio ágil y digital…</h3></div></div>
+                    <div class="row mt-4 gray-text main-description"><div class="col-lg-12">Cuenta corriente y tarjetas gratuitas, sin requisitos y con todas las características que en otras entidades tienen comisiones.</div></div>
+                    <div class="row mt-4 description"><div class="col-lg-12">La operativa de una cuenta corriente con <span class="bold">transferencias gratuitas en € nacionales e internacionales</span>, tarjetas  de débito y crédito <span class="bold">Visa Classic</span>, primera extracción mensual, envío de de divisa a domicilio, asistencia 24x7,un banquero remoto para sus consultas.</div></div>
+                    <div class="row indicator-space"></div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="content plan-card-right">
+                    <div class="title row">
+                      <img class="plan-card-icon col-lg-2" src="../../assets/images/ordenador.svg" alt="" />
+                      <div class="col-lg-10 fit-icon-height d-flex align-items-end mt-mobile"><span class="red-text plan-title">Singular Zero</span></div>
+                    </div>
+                    <div class="row mt-5"><div class="col-lg-12"><h3 class="red-text card-title">Y un buen apoyo tecnológico.</h3></div></div>
+                    <div class="row mt-5 gray-text main-description"><div class="col-lg-12">Una asistencia básica, pero imprescindible, en seguridad y tecnología; un servicio que todos agradecerán.</div></div>
+                    <div class="row mt-4 description"><div class="col-lg-12">Interruptor de tarjetas. Análisis de terminal PC.</div></div>
+                    <div class="row indicator-space"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="ventajas-btn" href="/singular-zero/" target="_blank">Consulte todas las ventajas</a>
+        </div>
+      </div>
+
+      <div class="row mb-5">
+        <div class="col-lg-3 plan-card-left d-flex flex-column">
+          <div class="plan-picture tigre"></div>
+          <div class="sub-picture d-flex flex-column">
+            <span class="red-text plan-title mt-5">Singular Plus</span>
+            <span class="plan-price gray-text mt-4"><span class="bold">9,50</span> €/mes</span>
+            <a href="" class="mt-4 c-button wide-btn">Contratar</a>
+          </div>
+        </div>
+        <div class="remove-col-padding col-lg-9">
+          <div class="main d-flex">
+            <div id="carousel-singular-plus" class="c-product--carousel carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators carousel-indicators--bottom">
+                <li data-target="#carousel-singular-plus" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-singular-plus" data-slide-to="1"></li>
+                <li data-target="#carousel-singular-plus" data-slide-to="2"></li>
+                <li data-target="#carousel-singular-plus" data-slide-to="3"></li>
+                <li data-target="#carousel-singular-plus" data-slide-to="4"></li>
+                <li data-target="#carousel-singular-plus" data-slide-to="5"></li>
+                <li data-target="#carousel-singular-plus" data-slide-to="6"></li>
+                <li data-target="#carousel-singular-plus" data-slide-to="7"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="content plan-card-right">
+                    <div class="row"><div class="col-lg-12"><h2 class="main-title red-text">Singular Plus</h2></div></div>
+                    <div class="row"><div class="col-lg-12"><h3 class="main-subtitle red-text">Para quienes buscan mucho más…</h3></div></div>
+                    <div class="row mt-4 gray-text main-description"><div class="col-lg-12">Descubra todas las ventajas que puede añadir a sus viajes diarios, a sus compras de valor y a su entorno digital.</div></div>
+                    <div class="row mt-4 description"><div class="col-lg-12">Seguro de accidentes de 500.000€, asistencia en viajes, compras protegidas, asistencia tecnológica e informática, gestión de reservas, Bip & Drive (Telepeaje, descuentos en gasolineras, etc.).</div></div>
+                    <div class="row indicator-space"></div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="content plan-card-right">
+                    <div class="title row">
+                      <img class="plan-card-icon col-lg-2" src="../../assets/images/bancario.svg" alt="" />
+                      <div class="col-lg-10 fit-icon-height d-flex align-items-end mt-mobile"><span class="red-text plan-title">Singular Plus</span></div>
+                    </div>
+                    <div class="row mt-5"><div class="col-lg-12"><h3 class="red-text card-title">Mucho más que operativa bancaria.</h3></div></div>
+                    <div class="row mt-5 gray-text main-description"><div class="col-lg-12">Mejoramos las coberturas y aportamos servicios adicionales para facilitar sus transacciones.</div></div>
+                    <div class="row mt-4 description"><div class="col-lg-12">A todo lo incluido en Singular Zero añadimos las ventajas asociadas a la Tarjeta de Crédito <span class="bold">Visa Platinum</span> y un <span class="bold">límite de crédito de 3.000€.</span></div></div>
+                    <div class="row indicator-space"></div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="content plan-card-right">
+                    <div class="title row">
+                      <img class="plan-card-icon col-lg-2" src="../../assets/images/correo.svg" alt="" />
+                      <div class="col-lg-10 fit-icon-height d-flex align-items-end mt-mobile"><span class="red-text plan-title">Singular Plus</span></div>
+                    </div>
+                    <div class="row mt-5"><div class="col-lg-12"><h3 class="red-text card-title">La ciberseguridad como punto fuerte.</h3></div></div>
+                    <div class="row mt-5 gray-text main-description"><div class="col-lg-12">Hemos desplegado una amplia protección técnica ante todas las situaciones que le puedan inquietar en el ámbito digital.</div></div>
+                    <div class="row mt-4 description"><div class="col-lg-12"><span class="bold">Ciberprotección, con rastreo de ordenadores robados.</span> Gestión de <span class="bold">ontraseñas seguras</span>. Control Parental. Protección y mejora de redes Wi-Fi.</span></div></div>
+                    <div class="row indicator-space"></div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="content plan-card-right">
+                    <div class="title row">
+                      <img class="plan-card-icon col-lg-2" src="../../assets/images/correo.svg" alt="" />
+                      <div class="col-lg-10 fit-icon-height d-flex align-items-end mt-mobile"><span class="red-text plan-title">Singular Plus</span></div>
+                    </div>
+                    <div class="row mt-5"><div class="col-lg-12"><h3 class="red-text card-title">Un verdadero asistente tecnológico.</h3></div></div>
+                    <div class="row mt-5 gray-text main-description"><div class="col-lg-12">La comodidad de tener un equipo que solucione sus dudas e imprevistos técnicos.</div></div>
+                    <div class="row mt-4 description"><div class="col-lg-12"><span class="bold">Asistencia Tecnológica. Asistencia informática remota.</span> Asistencia informática a domicilio. Descarga de software. Copia de seguridad online. Manitas tecnológico. Interruptor de tarjetas. Análisis de terminal PC.</div></div>
+                    <div class="row indicator-space"></div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="content plan-card-right">
+                    <div class="title row">
+                      <img class="plan-card-icon col-lg-2" src="../../assets/images/correo.svg" alt="" />
+                      <div class="col-lg-10 fit-icon-height d-flex align-items-end mt-mobile"><span class="red-text plan-title">Singular Plus</span></div>
+                    </div>
+                    <div class="row mt-5"><div class="col-lg-12"><h3 class="red-text card-title">Su mejor compañero de viaje.</h3></div></div>
+                    <div class="row mt-5 gray-text main-description"><div class="col-lg-12">Un gran respaldo para viajar con tranquilidad y la mejor asistencia para disfrutar sin reservas.</div></div>
+                    <div class="row mt-4 description"><div class="col-lg-12"><span class="bold">Seguro de accidentes 500.000€. Asistencia en viajes.</span> con asistencia médica. <span class="bold">Reembolso de gastos</span>, daños y pérdida de equipaje. Garantías de anulación y mucho más...</div></div>
+                    <div class="row indicator-space"></div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="content plan-card-right">
+                    <div class="title row">
+                      <img class="plan-card-icon col-lg-2" src="../../assets/images/correo.svg" alt="" />
+                      <div class="col-lg-10 fit-icon-height d-flex align-items-end mt-mobile"><span class="red-text plan-title">Singular Plus</span></div>
+                    </div>
+                    <div class="row mt-5"><div class="col-lg-12"><h3 class="red-text card-title">Tranquilidad en sus viajes diarios.</h3></div></div>
+                    <div class="row mt-5 gray-text main-description"><div class="col-lg-12">Desplácese con tranquilidad en su día a día con asistencia en carretera desde el kilómetro cero y pague cómodamente en peajes, gasolineras, aparcamientos, etc.</div></div>
+                    <div class="row mt-4 description"><div class="col-lg-12"><span class="bold">Bip & drive</span> (Telepeaje, y descuentos en gasolineras, parking, etc.), <span class="bold">Asistencia en carretera</span> Km 0, <span class="bold">Asistencia en viajes</span> a personas.</div></div>
+                    <div class="row indicator-space"></div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="content plan-card-right">
+                    <div class="title row">
+                      <img class="plan-card-icon col-lg-2" src="../../assets/images/correo.svg" alt="" />
+                      <div class="col-lg-10 fit-icon-height d-flex align-items-end mt-mobile"><span class="red-text plan-title">Singular Plus</span></div>
+                    </div>
+                    <div class="row mt-5"><div class="col-lg-12"><h3 class="red-text card-title">Asesoramiento legal.</h3></div></div>
+                    <div class="row mt-5 gray-text main-description"><div class="col-lg-12">Son muchas las situaciones en las que se necesita el asesoramiento de un abogado. Contar con un acompañamiento legal es adelantarse a los problemas.</div></div>
+                    <div class="row mt-4 description"><div class="col-lg-12">Ayuda legal <span class="bold">24 horas</span>, Asesoramiento jurídico <span class="bold">telefónico</span>., Consulta fichero morosos ASNEF</div></div>
+                    <div class="row indicator-space"></div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="content plan-card-right">
+                    <div class="title row">
+                      <img class="plan-card-icon col-lg-2" src="../../assets/images/correo.svg" alt="" />
+                      <div class="col-lg-10 fit-icon-height d-flex align-items-end mt-mobile"><span class="red-text plan-title">Singular Plus</span></div>
+                    </div>
+                    <div class="row mt-5"><div class="col-lg-12"><h3 class="red-text card-title">Sus compras siempre seguras.</h3></div></div>
+                    <div class="row mt-5 gray-text main-description"><div class="col-lg-12">Nuestros clientes Top disfrutan plenamente de sus compras porque tienen la tranquilidad de contar con una protección incomparable.</div></div>
+                    <div class="row mt-4 description"><div class="col-lg-12"><span class="bold">Compra protegida por robo o daño, 600€. Compra online protegida, no entregada o defectuosa, 600€. Devolución de gastos compra online, 20€.</span></div></div>
+                    <div class="row indicator-space"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="ventajas-btn" href="/singular-plus/" target="_blank">Consulte todas las ventajas</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-3 plan-card-left d-flex flex-column">
+          <div class="plan-picture aguila2"></div>
+          <div class="sub-picture d-flex flex-column">
+            <span class="red-text plan-title mt-5">Singular Top</span>
+            <span class="plan-price gray-text mt-4"><span class="bold">16,00</span> €/mes</span>
+            <a href="" class="mt-4 c-button wide-btn">Contratar</a>
+          </div>
+        </div>
+        <div class="remove-col-padding col-lg-9">
+          <div class="main d-flex">
+            <div id="carousel-singular-top" class="c-product--carousel carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators carousel-indicators--bottom">
+                <li data-target="#carousel-singular-top" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-singular-top" data-slide-to="1"></li>
+                <li data-target="#carousel-singular-top" data-slide-to="2"></li>
+                <li data-target="#carousel-singular-top" data-slide-to="3"></li>
+                <li data-target="#carousel-singular-top" data-slide-to="4"></li>
+                <li data-target="#carousel-singular-top" data-slide-to="5"></li>
+                <li data-target="#carousel-singular-top" data-slide-to="6"></li>
+                <li data-target="#carousel-singular-top" data-slide-to="7"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="content plan-card-right">
+                    <div class="row"><div class="col-lg-12"><h2 class="main-title red-text">Singular Top</h2></div></div>
+                    <div class="row"><div class="col-lg-12"><h3 class="main-subtitle red-text">Para todo un estilo de vida...</h3></div></div>
+                    <div class="row mt-4 gray-text main-description"><div class="col-lg-12">Mayor capacidad de pago y toda la comodidad de las salas VIP en los aeropuertos para disfrutar en sus viajes, además de seguridad ante cualquier imprevisto y los mayores niveles de protección en sus dispositivos móviles y su entorno digital.</div></div>
+                    <div class="row mt-4 description"><div class="col-lg-12">Seguro de accidentes de <span class="bold">1 millón de €</span>, Gestión de <span class="bold">Visados</span>, Acceso a 1.200 <span class="bold">salas VIP</span> en aeropuertos (2 al año), Seguro por <span class="bold">robo</span> y <span class="bold">rotura</span> de <span class="bold">móviles</span> 500€ al año, <span class="bold">Antivirus</span> para 5 dispositivos, Servicio <span class="bold">personalizado de reservas</span>, Compras protegidas, Asistencia tecnológica e Informática…</div></div>
+                    <div class="row indicator-space"></div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="content plan-card-right">
+                    <div class="title row">
+                      <img class="plan-card-icon col-lg-2" src="../../assets/images/bancario.svg" alt="" />
+                      <div class="col-lg-10 fit-icon-height d-flex align-items-end mt-mobile"><span class="red-text plan-title">Singular Top</span></div>
+                    </div>
+                    <div class="row mt-5"><div class="col-lg-12"><h3 class="red-text card-title">Un servicio bancario de excelencia.</h3></div></div>
+                    <div class="row mt-5 gray-text main-description"><div class="col-lg-12">Nada que temer en las redes. Ponemos a su servicio la máxima protección técnica, porque su seguridad en este ámbito es prioritaria.</div></div>
+                    <div class="row mt-4 description"><div class="col-lg-12">Con todos los servicios operativos Singular Zero y Singular Plus más las ventajas de la Tarjeta de Crédito <span class="bold">Visa Infinite</span> y un <span class="bold">límite de crédito de 10.000€</span>.</div></div>
+                    <div class="row indicator-space"></div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="content plan-card-right">
+                    <div class="title">
+                      <img class="plan-card-icon col-lg-2" src="../../assets/images/correo.svg" alt="" />
+                      <div class="col-lg-10 fit-icon-height d-flex align-items-end mt-mobile"><span class="red-text plan-title">Singular Top</span></div>
+                    </div>
+                    <div class="row mt-5"><div class="col-lg-12"><h3 class="red-text card-title">Un guardaespaldas digital.</h3></div></div>
+                    <div class="row mt-5 gray-text main-description"><div class="col-lg-12">Hemos desplegado una amplia protección técnica ante todas las situaciones que le puedan inquietar en el ámbito digital.</div></div>
+                    <div class="row mt-4 description"><div class="col-lg-12"><span class="bold">Antivirus 5 dispositivos móviles y/o sobremesa</span>. Rastreo de ordenadores robados. Gestión de <span class="bold">contraseñas seguras</span>. Control Parental. Protección y mejora de redes Wi-Fi.</div></div>
+                    <div class="row indicator-space"></div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="content plan-card-right">
+                    <div class="title row">
+                      <img class="plan-card-icon col-lg-2" src="../../assets/images/correo.svg" alt="" />
+                      <div class="col-lg-10 fit-icon-height d-flex align-items-end mt-mobile"><span class="red-text plan-title">Singular Top</span></div>
+                    </div>
+                    <div class="row mt-5"><div class="col-lg-12"><h3 class="red-text card-title">No más dudas informáticas.</h3></div></div>
+                    <div class="row mt-5 gray-text main-description"><div class="col-lg-12">La tranquilidad de tener asistencia técnica profesional para solucionar rápidamente cualquier duda o imprevisto.</div></div>
+                    <div class="row mt-4 description"><div class="col-lg-12"><span class="bold">Robo/Rotura dispositivos móviles 500 €/año.</span> Móvil de sustitución/cortesía. Recuperación de datos. Interruptor de tarjetas. Análisis de terminal PC. Asistencia tecnológica. Asistencia informática rempta. Asistencia informática a domicilio. Descarga de software. Copia de seguridad online. Manitas tecnológico.</div></div>
+                    <div class="row indicator-space"></div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="content plan-card-right">
+                    <div class="title row">
+                      <img class="plan-card-icon col-lg-2" src="../../assets/images/correo.svg" alt="" />
+                      <div class="col-lg-10 fit-icon-height d-flex align-items-end mt-mobile"><span class="red-text plan-title">Singular Top</span></div>
+                    </div>
+                    <div class="row mt-5"><div class="col-lg-12"><h3 class="red-text card-title">Los viajes son para disfrutar.</h3></div></div>
+                    <div class="row mt-5 gray-text main-description"><div class="col-lg-12">Solo tiene que elegir el destino y viajar sin ningún tipo de preocupaciones, con la asistencia más exquisita y la seguridad de que usted y los suyos tendrán el mayor respaldo en caso necesario.</div></div>
+                    <div class="row mt-4 description"><div class="col-lg-12"><span class="bold">2 salas VIP</span> anuales en 1.200 aeropuertos, Seguro de accidentes <span class="bold">1 Millón de €</span>, Asistencia en viajes, Asistencia médica, Servicio personalizado de reservas.</div></div>
+                    <div class="row indicator-space"></div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="content plan-card-right">
+                    <div class="title row">
+                      <img class="plan-card-icon col-lg-2" src="../../assets/images/correo.svg" alt="" />
+                      <div class="col-lg-10 fit-icon-height d-flex align-items-end mt-mobile"><span class="red-text plan-title">Singular Top</span></div>
+                    </div>
+                    <div class="row mt-5"><div class="col-lg-12"><h3 class="red-text card-title">Tranquilidad en sus viajes diarios.</h3></div></div>
+                    <div class="row mt-5 gray-text main-description"><div class="col-lg-12">Desplácese con tranquilidad en su día a día con asistencia en carretera desde el kilómetro cero y pague cómodamente en peajes, gasolineras, aparcamientos, etc.</div></div>
+                    <div class="row mt-4 description"><div class="col-lg-12"><span class="bold">Bip & drive</span> (Telepeaje, y descuentos en gasolineras, parking, etc.), <span class="bold">Asistencia en carretera</span> Km 0, <span class="bold">Asistencia en viajes</span> a personas.</div></div>
+                    <div class="row indicator-space"></div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="content plan-card-right">
+                    <div class="title row">
+                      <img class="plan-card-icon col-lg-2" src="../../assets/images/correo.svg" alt="" />
+                      <div class="col-lg-10 fit-icon-height d-flex align-items-end mt-mobile"><span class="red-text plan-title">Singular Top</span></div>
+                    </div>
+                    <div class="row mt-5"><div class="col-lg-12"><h3 class="red-text card-title">Asesoramiento legal.</h3></div></div>
+                    <div class="row mt-5 gray-text main-description"><div class="col-lg-12">Son muchas las situaciones en las que se necesita el asesoramiento de un abogado. Contar con un acompañamiento legal es adelantarse a los problemas.</div></div>
+                    <div class="row mt-4 description"><div class="col-lg-12">Ayuda legal <span class="bold">24 horas</span>, Asesoramiento jurídico <span class="bold">telefónico</span>., Consulta fichero morosos ASNEF</div></div>
+                    <div class="row indicator-space"></div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="content plan-card-right">
+                    <div class="title row">
+                      <img class="plan-card-icon col-lg-2" src="../../assets/images/correo.svg" alt="" />
+                      <div class="col-lg-10 fit-icon-height d-flex align-items-end mt-mobile"><span class="red-text plan-title">Singular Top</span></div>
+                    </div>
+                    <div class="row mt-5"><div class="col-lg-12"><h3 class="red-text card-title">Sus compras siempre seguras.</h3></div></div>
+                    <div class="row mt-5 gray-text main-description"><div class="col-lg-12">Nuestros clientes Top disfrutan plenamente de sus compras porque tienen la tranquilidad de contar con una protección incomparable.</div></div>
+                    <div class="row mt-4 description"><div class="col-lg-12"><span class="bold">Compra protegida por robo o daño, 600€. Compra online protegida,  no entregada o defectuosa, 600€. Devolución de gastos compra online, 20€.</span></div></div>
+                    <div class="row indicator-space"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="ventajas-btn" href="/singular-Top/" target="_blank">Consulte todas las ventajas</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  carruseles -->
+
+
+   <section class="w-100 aguila-background">
+    <div class="container row mr-0 ml-0 white-text">
+      <div class="pd-tb-95 pl-70 col-lg-7">
+        <div class="pb-4 text-uppercase subtitle-font-size">Usted elige, nosotros nos adaptamos.</div>
+        <h2 class="title-font-size">En Singular no tenemos cuentas, tenemos <span class="bold">sus</span> cuentas.</h2>
+        <!--<a href="" class="c-button">Conozca la suya</a>-->
+      </div>
+      <div class="col-lg-5 phone-img-container">
+        <img class="h-auto" src="../../assets/images/cuentas-y-tarjetas/telefono-img.png" alt="App móvil" />
+      </div>
+      <div class="background-opacity"></div>
+    </div>
+  </section>
+
+</div>
+
+{% endblock %}

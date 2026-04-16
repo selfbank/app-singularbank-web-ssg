@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="20px" viewBox="0 0 24 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.1 (78136) - https://sketchapp.com -->
+    <title></title>
+    <desc>Created with Sketch.</desc>
+    <g id="Diseño" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1-Quienes-Somos_desplegable-bio_desktop" transform="translate(-607.000000, -1921.000000)" fill="#222222" fill-rule="nonzero">
+            <g id="consejo-administrativo" transform="translate(65.000000, 1316.000000)">
+                <g id="desplegable-bio" transform="translate(0.000000, 88.000000)">
+                    <g id="icon-mail" transform="translate(542.000000, 514.000000)">
+                        <path d="M12,11.4519231 L21.6346154,5.42307692 L2.36538462,5.42307692 L12,11.4519231 Z M21.6346154,19.8461538 L21.6346154,7.84615385 L12,13.8173077 L2.36538462,7.84615385 L2.36538462,19.8461538 L21.6346154,19.8461538 Z M21.6346154,3 C22.2884648,3 22.8461515,3.24038221 23.3076923,3.72115385 C23.7692331,4.20192548 24,4.7692275 24,5.42307692 L24,19.8461538 C24,20.5 23.7692331,21.0673053 23.3076923,21.5480769 C22.8461515,22.0288486 22.2884648,22.2692308 21.6346154,22.2692308 L2.36538462,22.2692308 C1.71153519,22.2692308 1.15384846,22.0288486 0.692307692,21.5480769 C0.230766923,21.0673053 0,20.5 0,19.8461538 L0,5.42307692 C0,4.7692275 0.230766923,4.20192548 0.692307692,3.72115385 C1.15384846,3.24038221 1.71153519,3 2.36538462,3 L21.6346154,3 Z" id=""></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

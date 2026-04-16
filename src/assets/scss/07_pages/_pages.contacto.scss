@@ -1,0 +1,22 @@
+.p-contacto {
+  margin-bottom: 0;
+
+  .c-hero__container {
+    height: 100vh;
+  }
+
+  h1 {
+    margin-bottom: spacing(2);
+  }
+
+  p {
+    margin-bottom: spacing(base);
+    color: $white;
+  }
+
+  .c-title--pre {
+    margin-bottom: 0;
+    color: $gray;
+    margin-bottom: spacing(-2);
+  }
+}

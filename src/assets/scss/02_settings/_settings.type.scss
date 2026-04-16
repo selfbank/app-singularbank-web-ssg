@@ -1,0 +1,108 @@
+$modularscale: (
+  base: 16px,
+  ratio: 1.125,
+);
+
+// Line height
+$line-height-large: 1.5;
+$line-height-medium: 1.3;
+$line-height-small: 1.1;
+$line-height-xsmall: 0.9;
+
+// Typi breackpoints
+$breakpoints: (
+  xs: map-get($grid-breakpoints, xs),
+  sm: map-get($grid-breakpoints, sm),
+  md: map-get($grid-breakpoints, md),
+  lg: map-get($grid-breakpoints, lg),
+  xl: map-get($grid-breakpoints, xl),
+  xxl: map-get($grid-breakpoints, xxl)
+);
+
+// Typi sizes
+$typi: (
+  xs: (   // 11.23px
+    null: (ms(-3), 16px),
+  ),
+  s: (    // 14.22px
+    null: (ms(-1), 20px),
+  ),
+  base: ( // 16px
+    null: (ms(0), 24px),
+  ),
+  default: ( // 16px
+     null: (ms(0), 24px),
+  ),
+  normal: ( // 18px
+    xs: (ms(0), 24px),
+    sm: (ms(0), 24px),
+    md: (ms(1), 28px),
+    lg: (ms(1), 28px),
+    xl: (ms(1), 28px),
+    xxl: (ms(1), 28px),
+  ),
+  m: (    // 20.25px
+    xs: (ms(2), 28px),
+    sm: (ms(2), 28px),
+    md: (ms(2), 28px),
+    lg: (ms(2), 28px),
+    xl: (ms(2), 28px),
+    xxl: (ms(2), 28px),
+  ),
+  mplus: (    // 22.781pxpx
+  xs: (ms(3), 28px),
+  sm: (ms(3), 28px),
+  md: (ms(3), 32px),
+  lg: (ms(3), 32px),
+  xl: (ms(3), 32px),
+  xxl: (ms(3), 32px),
+  ),
+  l: (   // 28.26px
+    xs:   (ms(3), 32px),
+    sm:   (ms(3), 32px),
+    md:   (ms(5), 36px),
+    lg:   (ms(5), 36px),
+    xl:   (ms(5), 36px),
+    xxl:  (ms(5), 36px),
+  ),
+  lplus: (   // 36.491px
+    xs:   (ms(5), 32px),
+    sm:   (ms(5), 32px),
+    md:   (ms(5), 36px),
+    lg:   (ms(5), 36px),
+    xl:   (ms(7), 40px),
+    xxl:  (ms(7), 40px),
+  ),
+  xl: (  // 41.05px
+    xs:   (ms(7), 40px),
+    sm:   (ms(7), 40px),
+    md:   (ms(8), 48px),
+    lg:   (ms(8), 48px),
+    xl:   (ms(9), 52px),
+    xxl:  (ms(9), 52px),
+  ),
+  xxl: (  // 46.18px
+    xs:   (ms(5), 36px),
+    sm:   (ms(5), 36px),
+    md:   (ms(7), 40px),
+    lg:   (ms(7), 40px),
+    xl:   (ms(9), 52px),
+    xxl:  (ms(9), 52px),
+  ),
+  xhero: (  // 83.225px
+    xs:   (ms(8), 48px),
+    sm:   (ms(8), 48px),
+    md:   (ms(12), 72px),
+    lg:   (ms(12), 72px),
+    xl:   (ms(14), 80px),
+    xxl:  (ms(14), 80px),
+  ),
+  hero: (  // 83.225px
+  xs:   (ms(9), 52px),
+  sm:   (ms(9), 52px),
+  md:   (ms(13), 80px),
+  lg:   (ms(13), 80px),
+  xl:   (ms(13), 80px),
+  xxl:  (ms(13), 80px),
+  ),
+);

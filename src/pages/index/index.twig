@@ -1,0 +1,64 @@
+{% extends "_layouts/page.twig" %}
+{% block page %}
+
+<div id="overlay-loading">
+  <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+</div>
+
+
+<section class="p-bienvenida">
+  <div class="container">
+    <div class="p-bienvenida-hero">
+      <div class="row">
+        <div class="col-12">
+          <h1 class="p-bienvenida-hero__title">Bienvenido a
+          	<br/>Singular Bank.
+          </h1>
+
+		  <!--<h1 class="p-bienvenida-hero__title">No es<br /> para todos.<br />Es para ti.</h1-->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% include "index/separator.twig" %}
+
+<section class="mb-4">
+  <div class="container">
+    <a class="p-bienvenida-access p-bienvenida-access--private d-block" href="https://www.singularbank.es/home/" title="Ir a Singular Bank">
+      <div class="row">
+        <div class="col-10 col-md-7 offset-md-1 col-lg-6 offset-lg-1 col-xl-5 offset-xl-1">
+          <p class="p-bienvenida-access__title-2">Cuente con la ayuda de un banquero personal.</p>
+          <p class="p-bienvenida-access__subtitle">Más información ></p>
+        </div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<section class="mb-4">
+  <div class="container">
+    <a class="p-bienvenida-access p-bienvenida-access--public d-block" href="https://www.selfbank.es/" title="Ir a Self Bank">
+      <div class="row">
+        <div class="col-10 col-md-7 offset-md-4 col-lg-6 offset-lg-5 col-xl-5 offset-xl-6">
+          <p class="p-bienvenida-access__title">Toma online todas tus propias decisiones.</p>
+          <img src="/assets/images/bienvenida/logo-self-bank.png" alt="Self Bank" />
+        </div>
+      </div>
+    </a>
+  </div>
+</section>
+
+
+<section class="p-bienvenida__video mb-4">
+  <div class="container">
+   
+
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/tJJZrrPHFgw?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+  </div>
+</section>
+
+{% endblock %}

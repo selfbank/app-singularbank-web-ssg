@@ -1,0 +1,16 @@
+﻿site:
+  name: Singular Bank
+  url: https://singularbank.es/
+  googleAnalitycsId: GTM-5N54TTF
+  description: Singular Bank nace con la misión de ayudar a sus clientes a definir y alcanzar sus objetivos vitales, guiándoles en la gestión de sus finanzas.
+  author: Singular Bank
+og:
+  title: Asesoramiento financiero transparente y digital
+  description: Singular Bank nace con la misión de ayudar a sus clientes a definir y alcanzar sus objetivos vitales, guiándoles en la gestión de sus finanzas.
+  site_name: Singular Bank
+  image: https://singularbank.es/assets/images/servicios-digitales.jpg
+twitter:
+  card: summary
+  title: Singular Bank
+  description: Self Bank nace con la misión de ayudar a sus clientes a definir y alcanzar sus objetivos vitales, guiándoles en la gestión de sus finanzas.
+  image: https://singularbank.es/assets/images/servicios-digitales.jpg

@@ -1,0 +1,163 @@
+.plan-details {
+	
+	.section-details tr{
+		border-bottom: 1px solid #f5f5f5;
+		
+	}
+
+    .wide-btn {
+        width: 200px;
+        text-align: center;
+    }
+	
+	.icon-check {
+		max-width: 16px;
+		height: auto;
+	}                      
+
+    .background-gray {
+        background-color: #F5F5F5;
+    }
+
+    .price-number {
+        font-size: 24px;
+    }
+
+    .bold {
+        font-family: 'lynstonebold';
+    }
+
+    .red-text {
+        color: $red;
+        letter-spacing: 1.12px;
+    }
+
+    .w-fit-content {
+        width: fit-content;
+    }
+
+    .img-table-width {
+        width: 100px;
+    }
+
+    .gray-text {
+        color: $gray;
+    }
+
+    .data-section-mb {
+        margin-bottom: 50px;
+    }
+
+    .section-details td {
+        font-size: 14px;
+    }
+
+    .label-cell {
+        width: 70%;
+        padding-right: 20px;
+    }
+
+    .data-cell {
+        width: 30%;
+		text-align: center
+    }
+
+    .red-container {
+        padding-top: 70px;
+        padding-bottom: 70px;
+        background-color: $red;
+    }
+
+    .pd-tb-95 {
+        padding-top: 95px;
+        padding-bottom: 95px;
+    }
+
+    .pl-70 {
+        padding-left: 70px;
+    }
+
+    .phone-img-container {
+        position: relative;
+
+        > img {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 90%;
+        }
+    }
+
+    .white-text {
+        color: white;
+    }
+
+    .aguila-background {
+        background: $gray-dark url('../images/cuentas-y-tarjetas/singular-top-header.png') center center no-repeat;
+        background-size: cover;
+        margin-bottom: 0;
+    }
+	.leopard-background {
+        background: $gray-dark url('../images/cuentas-y-tarjetas/singular-plus-header.png') center center no-repeat;
+        background-size: cover;
+        margin-bottom: 0;
+    }
+	.garza-background {
+        background: $gray-dark url('../images/cuentas-y-tarjetas/singular-zero-header.png') center center no-repeat;
+        background-size: cover;
+        margin-bottom: 0;
+    }
+
+    .subtitle-font-sizes {
+        letter-spacing: 1.12px;
+        font-size: 16px;
+    }
+
+    .title-font-size {
+        font-size: 60px;
+        line-height: 72px;
+    }
+
+    .remove-row-margins {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+}
+
+
+
+@media (max-width: 1000px) {
+    div.plan-details {
+        .box-margin-top {
+            margin-top: 50px;
+        }
+
+        .background-gray {
+            background-color: white;
+        }
+
+        table.table-mg-top {
+            margin-top: 20px;
+        }
+
+        .img-table-width {
+            width: 80px;
+        }
+
+        .section-title > h3 {
+            font-size: 20px;
+        }
+
+        .section-title > .subtitle {
+            font-size: 18px;
+        }
+        
+        div.phone-img-container {
+            display: none;
+        }
+
+        div.pl-70 {
+            padding-left: 30px;
+        }    
+    }
+}

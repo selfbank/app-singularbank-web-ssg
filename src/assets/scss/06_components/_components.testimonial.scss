@@ -1,0 +1,31 @@
+.c-testimonial{
+  background: $gray-dark url('../images/testimonial.jpg') center center no-repeat;
+  background-size: cover;
+  padding-top: spacing(4);
+  padding-bottom: spacing(4);
+  color: white;
+}
+
+.c-testimonial__pretitle {
+  @include typi(s);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: spacing(-1);
+  letter-spacing: 2px;
+}
+
+.c-testimonial__title {
+  @include typi(xl);
+  font-family: 'lynstonelight';
+
+}
+
+.c-testimonial__text {
+  @include typi(normal);
+}
+
+.c-testimonial__cite {
+  @include typi(normal);
+  display: block;
+  margin-top: spacing(1);
+}

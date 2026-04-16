@@ -1,0 +1,51 @@
+{# ----- HOME ----- #}
+{% extends "_layouts/page.twig" %}
+{% block page %}
+
+<div id="carouselHero" class="c-carousel carousel slide carousel-fade" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="c-scroll">
+      <div class="c-scroll__container">
+        <div class="c-scroll__arrow"></div>
+        <div class="c-scroll__arrow"></div>
+        <div class="c-scroll__arrow"></div>
+      </div>
+    </div>
+
+    <div class="carousel-item active">
+      <img src="../assets/images/bk.home.jpg" class="d-block" alt="Diferente">
+      <div class="carousel-caption">
+        <!--<h1 class="carousel-title">Único</h1>-->
+		<h1 class="carousel-title">Diferente</h1>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <div class="row u-mb-4">
+      <div class="col-12 col-md-12 col-lg-7 col-xl-8">
+        <h2>Independencia, transparencia y confianza</h2>
+        <p>Singular Bank es un banco que persigue un objetivo: ayudar a sus clientes a definir y alcanzar sus objetivos vitales, guiándoles en la gestión de sus finanzas, de acuerdo con la singularidad de sus vidas, de sus expectativas y de sus necesidades.</p>
+        <p>Todo ello mediante un <strong>servicio basado en la confianza y la transparencia</strong>, combinando la mejor <strong>plataforma digital</strong> con una propuesta de <strong>asesoramiento libre de conflictos de interés</strong>,  ofreciendo los mejores productos y servicios en función de sus necesidades financieras, su patrimonio y su  perfil de riesgo.</p>
+      </div>
+      <div class="col-12 col-md-12 col-lg-4 offset-lg-1 col-xl-3">
+        {% include "_includes/callbox.twig" %}
+      </div>
+    </div>
+    {% include "home/cualidades.twig" %}
+  </div>
+</section>
+
+{% include "home/banner.twig" %}
+
+<section class="c-background c-background--lighter" id="oferta-360">
+  <div class="container">
+    {% include "_includes/oferta-360.twig" %}
+  </div>
+</section>
+{% include "_includes/ctabox.twig" %}
+
+{% endblock %}

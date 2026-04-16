@@ -1,0 +1,98 @@
+{% extends "_layouts/page.twig" %}
+{% block page %}
+
+<section class="c-hero c-hero--su-banquero">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-lg-8">
+        <div class="c-hero__container">
+          <h1>Su banquero: <br>su copiloto</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="u-mt-4 u-mb-4" id="entender">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-lg-9 col-xl-8">
+        <h2>Entender a nuestros clientes es nuestra prioridad.</h2>
+        <p>El banquero es el principal punto de contacto del cliente. Su misión es escuchar, conocerle en profundidad y entender sus inquietudes, objetivos vitales, estructura y origen de su patrimonio, las relaciones familiares y todos los aspectos que puedan influir en un correcto asesoramiento. Solo con este profundo conocimiento podrá adaptar la oferta del banco a lo que verdaderamente necesita el cliente.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="c-background c-background--lighter u-mb-4" id="modelo-relacion">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-12 col-lg-10 col-xl-8">
+        <h2>Modelo de Relación</h2>
+        <p>Nuestros banqueros cumplen con todos los requisitos que consideramos esenciales para poder alcanzar sus objetivos.</p>
+      </div>
+    </div>
+    <div class="row">
+	   <div class="col-12 col-md-6 col-lg-4">
+        <div class="c-icontext">
+          {{svgSprite('unica-prioridad')}}
+          <h3 class="c-icontext__title">Una única prioridad</h3>
+          <p>El cliente y su satisfacción es lo primero. Cuidamos a nuestros clientes, en el fondo y en la forma.</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="c-icontext">
+          {{svgSprite('interlocutor-unico')}}
+          <h3 class="c-icontext__title">Interlocutor único</h3>
+          <p>El banquero será su principal punto de contacto, lo que garantiza agilidad y adecuación a sus necesidades.</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="c-icontext">
+          {{svgSprite('cartera-reducida')}}
+          <h3 class="c-icontext__title">Reducida cartera de clientes</h3>
+          <p>Garantizando así la singularidad en el trato y la total dedicación.</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="c-icontext">
+          {{svgSprite('sin-objetivo-de-producto')}}
+          <h3 class="c-icontext__title">Amplios conocimientos</h3>
+          <p>Nuestros banqueros cuentan con un extenso conocimiento de los mercados financieros, de los productos del mercado y de fiscalidad.</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="c-icontext">
+          {{svgSprite('proactividad')}}
+          <h3 class="c-icontext__title">Proactividad</h3>
+          <p>Intentamos anticiparnos siempre a las necesidades del cliente.</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="c-icontext">
+          {{svgSprite('tecnologia')}}
+          <h3 class="c-icontext__title">Con la mejor tecnología</h3>
+          <p>Para agilizar al máximo los trámites burocráticos, a la vez que se potencia la seguridad en la operativa.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="u-mb-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-12 col-lg-10 col-xl-8">
+        <h2>El banquero no está solo</h2>
+        <p>Además de tener una elevada formación y experiencia, cuenta con el apoyo de un gran equipo.</p>
+      </div>
+    </div>
+    {% include "su-banquero/textbox.twig" %}
+  </div>
+</section>
+
+{% include "_includes/ctabox.twig" %}
+
+
+{% endblock %}

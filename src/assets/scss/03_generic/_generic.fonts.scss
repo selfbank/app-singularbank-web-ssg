@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'lynstonelight';
+    src: url('../fonts/Lynstone-Light.woff2') format('woff2'),
+        url('../fonts/Lynstone-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'lynstone';
+    src: url('../fonts/Lynstone-Book.woff2') format('woff2'),
+        url('../fonts/Lynstone-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'lynstonebold';
+    src: url('../fonts/Lynstone-SemiBold.woff2') format('woff2'),
+        url('../fonts/Lynstone-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}

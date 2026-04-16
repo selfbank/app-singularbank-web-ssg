@@ -1,0 +1,161 @@
+.c-persona {
+  @include media-breakpoint-only(xs) {
+    margin-bottom: spacing(1);
+  }
+}
+
+.c-persona--half{
+  margin-bottom: spacing(1);
+  @include media-breakpoint-up(md) {
+    margin-bottom: spacing(2);
+  }
+}
+
+.c-persona__image {
+  display: block;
+  position: relative;
+  margin-bottom: spacing(-2);
+  -webkit-appearance: inherit;
+
+  height: 250px;
+  overflow: hidden;
+  @include media-breakpoint-up(md) {
+    height: 330px;
+    margin-bottom: spacing(base);
+  }
+
+  &:hover .c-persona__btn {
+    background: darken($red, 10%);
+  }
+}
+
+.c-persona--half .c-persona__image{
+  height: 150px;
+  overflow: hidden;
+  @include media-breakpoint-up(md) {
+    height: 230px;
+  }
+}
+
+.c-persona__btn {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 48px;
+  height: 48px;
+  background: $red;
+  display: flex;
+  justify-content: center;
+	align-items: center;
+
+  svg {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+.c-persona__btn--top-right{
+  top: 0;
+  right: 0;
+  left: auto;
+  svg{
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    margin-right: 0 !important;
+  }
+
+  &:hover{
+    cursor: pointer;
+    background: #9b2a1f;
+  }
+}
+
+.c-persona__title {
+  @include typi(lplus);
+  margin-bottom: spacing(-3);
+}
+
+.c-persona--half {
+  .c-persona__title {
+    @include typi(l);
+    margin-bottom: spacing(-3);
+    @include media-breakpoint-up(md) {
+      margin-bottom: spacing(-3);
+    }
+    @include media-breakpoint-up(lg) {
+      margin-bottom: spacing(-3);
+    }
+  }
+}
+
+.c-persona__position {
+  text-transform: uppercase;
+  color: $gray;
+  letter-spacing: 2px;
+  margin-bottom: 0;
+  @include typi(s);
+}
+
+.c-persona__modal {
+  border:0;
+  border-radius: 0;
+  background: rgba($white,.7);
+
+  .c-persona__image {
+    position: inherit;
+  }
+
+  .close {
+    margin-bottom: 0;
+    position: absolute;
+    left: 0;
+    top:0;
+    z-index: 10;
+
+    .c-persona__btn {
+      position: relative;
+
+      &:hover{background: darken($red, 10%);}
+
+      svg {transform: rotate(45deg);}
+    }
+  }
+
+  .modal-body,
+  .modal-content {
+    border-radius: 0;
+    padding: 0;
+    border: 0;
+    background: $gray-lighter;
+  }
+
+  .c-persona__modal__image {
+    width: 100%;
+
+    @include media-breakpoint-up(lg) {
+      width: auto;
+    }
+  }
+
+  .c-persona__modal__container {
+    padding: spacing(base);
+    background: $gray-lighter;
+
+    @include media-breakpoint-up(xl) {
+      padding: spacing(2);
+    }
+  }
+
+  .c-persona__modal__text {
+    @include typi(base);
+    color: $gray-dark;
+  }
+
+  .c-persona__modal__text--data {
+    margin-top: spacing(2);
+    margin-bottom: spacing(2);
+
+    p {line-height: 1.3;}
+    strong {color: $black-dark;}
+  }
+}

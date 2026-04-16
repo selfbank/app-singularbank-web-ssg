@@ -1,0 +1,42 @@
+{
+  "name": "pleasure",
+  "version": "0.0.2",
+  "description": "Twig based Static Site Generator, powered by gulp.",
+  "main": "gulpfile.js",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "prepare": "husky",
+    "postinstall": "patch-package",
+    "start": "node_modules/gulp/bin/gulp.js",
+    "build": "node_modules/gulp/bin/gulp.js build --production",
+    "clear": "node_modules/gulp/bin/gulp.js clear --production"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@commitlint/cli": "^20.5.0",
+    "@commitlint/config-conventional": "^20.5.0",
+    "bootstrap": "^4.6.2",
+    "gulp": "^4.0.2",
+    "gulp-build": "^0.5.3",
+    "gulp-tasks-pleasure": "0.0.6",
+    "husky": "^9.1.7",
+    "include-media": "^1.4.10",
+    "jquery": "^3.7.1",
+    "modularscale-sass": "^3.0.10",
+    "npm-run-all": "^4.1.5",
+    "patch-package": "^8.0.1",
+    "sass": "^1.99.0",
+    "typi": "^3.2.0"
+  },
+  "overrides": {
+    "gulp-sass": "5.1.0",
+    "node-sass": "npm:sass@^1.99.0",
+    "@xmldom/xmldom": "0.8.12",
+    "axios": "^1.15.0",
+    "underscore": "^1.13.8",
+    "locutus": "^3.0.34"
+  }
+}

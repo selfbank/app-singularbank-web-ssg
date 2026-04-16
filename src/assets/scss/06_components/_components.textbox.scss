@@ -1,0 +1,48 @@
+.c-textbox{
+  margin-bottom: spacing(1);
+  @include media-breakpoint-only(xs) {
+    margin-bottom: spacing(base);
+  }
+
+  strong {
+    color: $black;
+    font-family: 'lynstonebold', arial, sans-serif;
+  }
+
+}
+
+.c-textbox__content {
+  height: 100%;
+  background: $gray-light;
+  text-decoration: none;
+  padding: spacing(1);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  * {width: 100%;}
+  .c-button {width: auto;}
+
+  h3 {
+    color: $red;
+    @include media-breakpoint-down(lg) {
+      @include typi(mplus);
+    }
+  }
+
+  ul {
+
+    li {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.c-textbox__title {color: $black-dark;}
+
+.c-texto-legal {
+  padding-top: spacing(-2);
+ font-size: 11px !important;
+ line-height: 20px;
+}

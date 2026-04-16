@@ -1,0 +1,15 @@
+.u-text-base{
+  @include typi(default);
+}
+
+.u-text-l{
+  @include  typi(l);
+}
+
+.u-no-underline{
+  text-decoration: none;
+}
+
+.u-txt-center {
+  text-align: center;
+}

@@ -1,0 +1,42 @@
+h1 {
+  font-family: 'lynstonelight', sans-serif;
+  font-weight: normal;
+  @include typi(hero);
+  margin-bottom: spacing(-3);
+  @include media-breakpoint-up(md) {
+    margin-bottom: spacing(base);
+  }
+  @include media-breakpoint-up(xl) {
+    margin-bottom: spacing(base);
+  }
+
+}
+
+
+h2 {
+  font-family: 'lynstonelight', sans-serif;
+  font-weight: normal;
+  @include typi(xl);
+  margin-bottom: spacing(base);
+  @include media-breakpoint-up(md) {
+    margin-bottom: spacing(1);
+  }
+
+}
+
+p + h2, ol + h2, ul + h2 {
+  margin-top: spacing(1);
+  margin-bottom: spacing(-2);
+}
+
+h3 {
+  font-family: 'lynstonelight', sans-serif;
+  font-weight: normal;
+  @include typi(l);
+  margin-bottom: spacing(base);
+}
+
+p + h3, ol + h3, ul + h3 {
+  margin-top: spacing(-2);
+  margin-bottom: spacing(-2);
+}

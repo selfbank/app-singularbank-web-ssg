@@ -1,0 +1,15 @@
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  -ms-overflow-style: scrollbar;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.width-full {
+  width: 100%;
+}

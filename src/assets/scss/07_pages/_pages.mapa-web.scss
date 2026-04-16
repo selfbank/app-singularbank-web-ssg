@@ -1,0 +1,42 @@
+.page-mapa-web {background: $black-dark;}
+
+.p-mapa-web {
+  padding-top: spacing(4);
+  padding-bottom: spacing(4);
+  background: $gray-dark url('../images/bk.mapa-web.jpg') center center no-repeat;
+  background-size: cover;
+
+  @include media-breakpoint-up(md) {
+    padding-top: 150px;
+  }
+
+  h1 {
+    @include typi(xxl);
+    color: $white;
+    margin-bottom: spacing(1);
+  }
+
+  h2 {
+    @include typi(m);
+    color: $white;
+    margin-bottom: spacing(-2);
+  }
+
+  ul {
+    border-top: none;
+    margin-top: 0;
+    padding-top: 0;
+
+    li {
+      list-style-image: url('../images/circle-list-gray.svg');
+      ul li{
+        list-style: none;
+        color: $gray;
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+    }
+  }
+
+}
